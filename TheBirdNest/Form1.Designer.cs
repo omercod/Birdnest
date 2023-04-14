@@ -17,7 +17,6 @@ namespace TheBirdNest
             if (disposing && (components != null))
             {
                 components.Dispose();
-                int i = 0;
             }
             base.Dispose(disposing);
         }
