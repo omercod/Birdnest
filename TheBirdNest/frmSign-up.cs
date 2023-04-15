@@ -34,7 +34,7 @@ namespace TheBirdNest
             if (txtUserLogIn.Text == "Username")
             {
                 txtUserLogIn.Text = "";
-                txtUserLogIn.ForeColor = Color.DarkGray;
+                txtUserLogIn.ForeColor = Color.Black;
             }
         }
 
@@ -52,7 +52,7 @@ namespace TheBirdNest
             if (txtPassword.Text == "Password")
             {
                 txtPassword.Text = "";
-                txtPassword.ForeColor = Color.DarkGray;
+                txtPassword.ForeColor = Color.Black;
                 txtPassword.PasswordChar = '*';
             }
         }
@@ -72,7 +72,7 @@ namespace TheBirdNest
             if (txtID.Text == "ID")
             {
                 txtID.Text = "";
-                txtID.ForeColor = Color.DarkGray;
+                txtID.ForeColor = Color.Black;
             }
         }
 

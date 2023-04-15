@@ -54,7 +54,7 @@ namespace TheBirdNest
             if(txtUserLogIn.Text == "Username")
             {
                 txtUserLogIn.Text = "";
-                txtUserLogIn.ForeColor = Color.DarkGray;
+                txtUserLogIn.ForeColor = Color.Black;
             }
         }
 
@@ -72,7 +72,7 @@ namespace TheBirdNest
             if (txtPassword.Text == "Password")
             {
                 txtPassword.Text = "";
-                txtPassword.ForeColor = Color.DarkGray;
+                txtPassword.ForeColor = Color.Black;
                 txtPassword.PasswordChar = '*';
             }
         }
@@ -99,7 +99,9 @@ namespace TheBirdNest
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            
+            Home HomeMenu = new Home();
+            HomeMenu.Show();
+            this.Hide();
         }
 
         private void labelCreateAccount_Click(object sender, EventArgs e)
