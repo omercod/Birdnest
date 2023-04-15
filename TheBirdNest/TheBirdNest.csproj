@@ -52,10 +52,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSign-up.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSign-up.Designer.cs">
+      <DependentUpon>frmSign-up.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSign-up.resx">
+      <DependentUpon>frmSign-up.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -97,6 +106,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-password-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Birds Nest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-id-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-identification-documents-26.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

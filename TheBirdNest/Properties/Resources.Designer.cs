@@ -83,6 +83,36 @@ namespace TheBirdNest.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Birds_Nest {
+            get {
+                object obj = ResourceManager.GetObject("Birds Nest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_id_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-id-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_identification_documents_26 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-identification-documents-26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_password_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-password-30", resourceCulture);
