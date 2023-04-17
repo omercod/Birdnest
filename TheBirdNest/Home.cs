@@ -15,6 +15,8 @@ namespace TheBirdNest
         public Home()
         {
             InitializeComponent();
+            userControlAddBird1.Hide();
+            userControlAddCage1.Hide();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -25,6 +27,31 @@ namespace TheBirdNest
         private void btnLogIn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bttnAddBird_Click(object sender, EventArgs e)
+        {
+            userControlAddBird1.Show();
+            userControlAddCage1.Hide();
+            bttnAddBird.ForeColor = Color.Black;
+            btnAddCage.ForeColor = Color.White;
+            btnSearchBird.ForeColor = Color.White;
+            btnSearchCage.ForeColor = Color.White;
+        }
+
+        private void userControlAddBird1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddCage_Click(object sender, EventArgs e)
+        {
+            userControlAddCage1.Show();
+            userControlAddBird1.Hide();
+            btnAddCage.ForeColor = Color.Black;
+            bttnAddBird.ForeColor = Color.White;
+            btnSearchBird.ForeColor = Color.White;
+            btnSearchCage.ForeColor = Color.White;
         }
     }
 }

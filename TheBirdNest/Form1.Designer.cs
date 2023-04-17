@@ -193,6 +193,7 @@ namespace TheBirdNest
             this.txtUserLogIn.TabIndex = 5;
             this.txtUserLogIn.TabStop = false;
             this.txtUserLogIn.Text = "Username";
+            this.txtUserLogIn.TextChanged += new System.EventHandler(this.txtUserLogIn_TextChanged_1);
             this.txtUserLogIn.Enter += new System.EventHandler(this.txtUserLogIn_Enter);
             this.txtUserLogIn.Leave += new System.EventHandler(this.txtUserLogIn_Leave);
             // 

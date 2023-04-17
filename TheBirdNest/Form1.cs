@@ -110,5 +110,10 @@ namespace TheBirdNest
             signUpForm.Show();
             this.Hide();
         }
+
+        private void txtUserLogIn_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
