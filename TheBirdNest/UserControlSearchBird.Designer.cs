@@ -159,7 +159,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::TheBirdNest.Properties.Resources.icons8_bird_100;
-            this.pictureBox1.Location = new System.Drawing.Point(543, 206);
+            this.pictureBox1.Location = new System.Drawing.Point(557, 83);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 100);
