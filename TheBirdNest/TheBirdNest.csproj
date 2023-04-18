@@ -78,6 +78,12 @@
     <Compile Include="UserControlAddCage.Designer.cs">
       <DependentUpon>UserControlAddCage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlSearchBird.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSearchBird.Designer.cs">
+      <DependentUpon>UserControlSearchBird.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlAddCage.resx">
       <DependentUpon>UserControlAddCage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSearchBird.resx">
+      <DependentUpon>UserControlSearchBird.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
