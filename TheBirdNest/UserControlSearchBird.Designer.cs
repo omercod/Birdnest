@@ -34,12 +34,12 @@
             this.lblSearchBird = new System.Windows.Forms.TextBox();
             this.lblSearchBirdGender = new System.Windows.Forms.Label();
             this.lblSearchHatchingDate = new System.Windows.Forms.Label();
-            this.txtBirdSpecies = new System.Windows.Forms.TextBox();
             this.lblSearchBirdSpecies = new System.Windows.Forms.Label();
             this.txtSerialNumberSearchBird = new System.Windows.Forms.TextBox();
             this.lblSerialNumberSearchBird = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnToSearchBird = new System.Windows.Forms.Button();
+            this.txtBirdSpecies = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,15 +118,6 @@
             this.lblSearchHatchingDate.TabIndex = 29;
             this.lblSearchHatchingDate.Text = "Hatching Date:";
             // 
-            // txtBirdSpecies
-            // 
-            this.txtBirdSpecies.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtBirdSpecies.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.txtBirdSpecies.Location = new System.Drawing.Point(232, 155);
-            this.txtBirdSpecies.Name = "txtBirdSpecies";
-            this.txtBirdSpecies.Size = new System.Drawing.Size(218, 34);
-            this.txtBirdSpecies.TabIndex = 26;
-            // 
             // lblSearchBirdSpecies
             // 
             this.lblSearchBirdSpecies.AutoSize = true;
@@ -180,6 +171,15 @@
             this.btnToSearchBird.Text = "SEARCH BIRD";
             this.btnToSearchBird.UseVisualStyleBackColor = false;
             // 
+            // txtBirdSpecies
+            // 
+            this.txtBirdSpecies.BackColor = System.Drawing.Color.FloralWhite;
+            this.txtBirdSpecies.Font = new System.Drawing.Font("Nirmala UI", 12F);
+            this.txtBirdSpecies.Location = new System.Drawing.Point(232, 155);
+            this.txtBirdSpecies.Name = "txtBirdSpecies";
+            this.txtBirdSpecies.Size = new System.Drawing.Size(218, 34);
+            this.txtBirdSpecies.TabIndex = 26;
+            // 
             // UserControlBirdSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -215,10 +215,10 @@
         private System.Windows.Forms.TextBox lblSearchBird;
         private System.Windows.Forms.Label lblSearchBirdGender;
         private System.Windows.Forms.Label lblSearchHatchingDate;
-        private System.Windows.Forms.TextBox txtBirdSpecies;
         private System.Windows.Forms.Label lblSearchBirdSpecies;
         private System.Windows.Forms.TextBox txtSerialNumberSearchBird;
         private System.Windows.Forms.Label lblSerialNumberSearchBird;
         private System.Windows.Forms.Button btnToSearchBird;
+        private System.Windows.Forms.TextBox txtBirdSpecies;
     }
 }
