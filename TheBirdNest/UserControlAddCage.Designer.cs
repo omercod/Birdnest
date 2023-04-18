@@ -39,9 +39,9 @@ namespace TheBirdNest
             this.txtSerialNumberCage = new System.Windows.Forms.TextBox();
             this.lblSerialNumberCage = new System.Windows.Forms.Label();
             this.txtCageHigh = new System.Windows.Forms.TextBox();
-            this.comboBoxCageMaterial = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBoxCageMat = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -150,18 +150,6 @@ namespace TheBirdNest
             this.txtCageHigh.Size = new System.Drawing.Size(218, 34);
             this.txtCageHigh.TabIndex = 43;
             // 
-            // comboBoxCageMaterial
-            // 
-            this.comboBoxCageMaterial.FormattingEnabled = true;
-            this.comboBoxCageMaterial.Items.AddRange(new object[] {
-            "Iron",
-            "Wood",
-            "plastic"});
-            this.comboBoxCageMaterial.Location = new System.Drawing.Point(193, 332);
-            this.comboBoxCageMaterial.Name = "comboBoxCageMaterial";
-            this.comboBoxCageMaterial.Size = new System.Drawing.Size(218, 24);
-            this.comboBoxCageMaterial.TabIndex = 44;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
@@ -185,12 +173,29 @@ namespace TheBirdNest
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
             // 
+            // comboBoxCageMat
+            // 
+            this.comboBoxCageMat.BackColor = System.Drawing.Color.FloralWhite;
+            this.comboBoxCageMat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCageMat.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCageMat.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxCageMat.FormattingEnabled = true;
+            this.comboBoxCageMat.Items.AddRange(new object[] {
+            "Iron",
+            "Wood",
+            "Plastic"});
+            this.comboBoxCageMat.Location = new System.Drawing.Point(193, 328);
+            this.comboBoxCageMat.Name = "comboBoxCageMat";
+            this.comboBoxCageMat.Size = new System.Drawing.Size(218, 33);
+            this.comboBoxCageMat.TabIndex = 46;
+            this.comboBoxCageMat.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // UserControlAddCage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.Controls.Add(this.comboBoxCageMaterial);
+            this.Controls.Add(this.comboBoxCageMat);
             this.Controls.Add(this.txtCageHigh);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -226,6 +231,6 @@ namespace TheBirdNest
         private System.Windows.Forms.TextBox txtSerialNumberCage;
         private System.Windows.Forms.Label lblSerialNumberCage;
         private System.Windows.Forms.TextBox txtCageHigh;
-        private System.Windows.Forms.ComboBox comboBoxCageMaterial;
+        private System.Windows.Forms.ComboBox comboBoxCageMat;
     }
 }
