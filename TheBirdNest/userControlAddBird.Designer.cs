@@ -31,9 +31,7 @@ namespace TheBirdNest
         {
             this.lblSerialNumberBird = new System.Windows.Forms.Label();
             this.txtSerialNumberBird = new System.Windows.Forms.TextBox();
-            this.txtBirdSpecies = new System.Windows.Forms.TextBox();
             this.lblBirdSpecies = new System.Windows.Forms.Label();
-            this.txtBirdSubSpecies = new System.Windows.Forms.TextBox();
             this.lblSubSpecies = new System.Windows.Forms.Label();
             this.lblHatchingDate = new System.Windows.Forms.Label();
             this.lblBirdGender = new System.Windows.Forms.Label();
@@ -49,6 +47,8 @@ namespace TheBirdNest
             this.radiobtnBirdFeMaleGender = new System.Windows.Forms.RadioButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBoxBirdSpe = new System.Windows.Forms.ComboBox();
+            this.comboBoxBirdSubSpe = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,16 +72,6 @@ namespace TheBirdNest
             this.txtSerialNumberBird.Size = new System.Drawing.Size(218, 34);
             this.txtSerialNumberBird.TabIndex = 1;
             // 
-            // txtBirdSpecies
-            // 
-            this.txtBirdSpecies.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtBirdSpecies.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.txtBirdSpecies.Location = new System.Drawing.Point(176, 139);
-            this.txtBirdSpecies.Name = "txtBirdSpecies";
-            this.txtBirdSpecies.Size = new System.Drawing.Size(218, 34);
-            this.txtBirdSpecies.TabIndex = 3;
-            this.txtBirdSpecies.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
             // lblBirdSpecies
             // 
             this.lblBirdSpecies.AutoSize = true;
@@ -91,15 +81,6 @@ namespace TheBirdNest
             this.lblBirdSpecies.Size = new System.Drawing.Size(132, 28);
             this.lblBirdSpecies.TabIndex = 2;
             this.lblBirdSpecies.Text = "Bird Species:";
-            // 
-            // txtBirdSubSpecies
-            // 
-            this.txtBirdSubSpecies.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtBirdSubSpecies.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.txtBirdSubSpecies.Location = new System.Drawing.Point(176, 190);
-            this.txtBirdSubSpecies.Name = "txtBirdSubSpecies";
-            this.txtBirdSubSpecies.Size = new System.Drawing.Size(218, 34);
-            this.txtBirdSubSpecies.TabIndex = 5;
             // 
             // lblSubSpecies
             // 
@@ -265,11 +246,39 @@ namespace TheBirdNest
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
+            // comboBoxBirdSpe
+            // 
+            this.comboBoxBirdSpe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxBirdSpe.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxBirdSpe.FormattingEnabled = true;
+            this.comboBoxBirdSpe.Items.AddRange(new object[] {
+            "American Goldian",
+            "European Goldian",
+            "Australian Goldian"});
+            this.comboBoxBirdSpe.Location = new System.Drawing.Point(176, 139);
+            this.comboBoxBirdSpe.Name = "comboBoxBirdSpe";
+            this.comboBoxBirdSpe.Size = new System.Drawing.Size(218, 33);
+            this.comboBoxBirdSpe.TabIndex = 45;
+            this.comboBoxBirdSpe.SelectedIndexChanged += new System.EventHandler(this.comboBoxBirdSpe_SelectedIndexChanged);
+            // 
+            // comboBoxBirdSubSpe
+            // 
+            this.comboBoxBirdSubSpe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxBirdSubSpe.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxBirdSubSpe.FormattingEnabled = true;
+            this.comboBoxBirdSubSpe.Location = new System.Drawing.Point(176, 190);
+            this.comboBoxBirdSubSpe.Name = "comboBoxBirdSubSpe";
+            this.comboBoxBirdSubSpe.Size = new System.Drawing.Size(218, 33);
+            this.comboBoxBirdSubSpe.TabIndex = 47;
+            this.comboBoxBirdSubSpe.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
             // userControlAddBird
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.Controls.Add(this.comboBoxBirdSubSpe);
+            this.Controls.Add(this.comboBoxBirdSpe);
             this.Controls.Add(this.radiobtnBirdFeMaleGender);
             this.Controls.Add(this.radiobtnBirdMaleGender);
             this.Controls.Add(this.dateBirdHatchingDate);
@@ -284,9 +293,7 @@ namespace TheBirdNest
             this.Controls.Add(this.lblCageNumber);
             this.Controls.Add(this.lblBirdGender);
             this.Controls.Add(this.lblHatchingDate);
-            this.Controls.Add(this.txtBirdSubSpecies);
             this.Controls.Add(this.lblSubSpecies);
-            this.Controls.Add(this.txtBirdSpecies);
             this.Controls.Add(this.lblBirdSpecies);
             this.Controls.Add(this.txtSerialNumberBird);
             this.Controls.Add(this.lblSerialNumberBird);
@@ -304,9 +311,7 @@ namespace TheBirdNest
 
         private System.Windows.Forms.Label lblSerialNumberBird;
         private System.Windows.Forms.TextBox txtSerialNumberBird;
-        private System.Windows.Forms.TextBox txtBirdSpecies;
         private System.Windows.Forms.Label lblBirdSpecies;
-        private System.Windows.Forms.TextBox txtBirdSubSpecies;
         private System.Windows.Forms.Label lblSubSpecies;
         private System.Windows.Forms.Label lblHatchingDate;
         private System.Windows.Forms.Label lblBirdGender;
@@ -322,5 +327,7 @@ namespace TheBirdNest
         private System.Windows.Forms.DateTimePicker dateBirdHatchingDate;
         private System.Windows.Forms.RadioButton radiobtnBirdMaleGender;
         private System.Windows.Forms.RadioButton radiobtnBirdFeMaleGender;
+        private System.Windows.Forms.ComboBox comboBoxBirdSpe;
+        private System.Windows.Forms.ComboBox comboBoxBirdSubSpe;
     }
 }
