@@ -263,13 +263,14 @@ namespace TheBirdNest
             // 
             // comboBoxBirdSubSpe
             // 
-            this.comboBoxBirdSubSpe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxBirdSubSpe.Enabled = false;
             this.comboBoxBirdSubSpe.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBirdSubSpe.FormattingEnabled = true;
             this.comboBoxBirdSubSpe.Location = new System.Drawing.Point(176, 190);
             this.comboBoxBirdSubSpe.Name = "comboBoxBirdSubSpe";
             this.comboBoxBirdSubSpe.Size = new System.Drawing.Size(218, 33);
             this.comboBoxBirdSubSpe.TabIndex = 47;
+            this.comboBoxBirdSubSpe.Text = "Select Species First";
             this.comboBoxBirdSubSpe.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // userControlAddBird

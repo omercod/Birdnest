@@ -44,14 +44,20 @@ namespace TheBirdNest
             switch (comboBoxBirdSpe.SelectedIndex)
             {
                 case 0:
+                    comboBoxBirdSubSpe.DropDownStyle = ComboBoxStyle.DropDownList;
+                    comboBoxBirdSubSpe.Enabled = true;
                     comboBoxBirdSubSpe.Items.Clear();
                     comboBoxBirdSubSpe.Items.AddRange(arrAmerica);
                     break;
                 case 1:
+                    comboBoxBirdSubSpe.DropDownStyle = ComboBoxStyle.DropDownList;
+                    comboBoxBirdSubSpe.Enabled = true;
                     comboBoxBirdSubSpe.Items.Clear();
                     comboBoxBirdSubSpe.Items.AddRange(arrEurope);
                     break;
                 case 2:
+                    comboBoxBirdSubSpe.DropDownStyle = ComboBoxStyle.DropDownList;
+                    comboBoxBirdSubSpe.Enabled = true;
                     comboBoxBirdSubSpe.Items.Clear();
                     comboBoxBirdSubSpe.Items.AddRange(arrAustralia);
                     break;
