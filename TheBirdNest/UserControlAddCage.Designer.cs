@@ -87,7 +87,7 @@ namespace TheBirdNest
             // 
             this.txtSubSpecies.BackColor = System.Drawing.Color.FloralWhite;
             this.txtSubSpecies.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.txtSubSpecies.Location = new System.Drawing.Point(193, 219);
+            this.txtSubSpecies.Location = new System.Drawing.Point(202, 219);
             this.txtSubSpecies.Name = "txtSubSpecies";
             this.txtSubSpecies.Size = new System.Drawing.Size(218, 34);
             this.txtSubSpecies.TabIndex = 28;
@@ -106,7 +106,7 @@ namespace TheBirdNest
             // 
             this.txtBirdSpecies.BackColor = System.Drawing.Color.FloralWhite;
             this.txtBirdSpecies.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.txtBirdSpecies.Location = new System.Drawing.Point(193, 168);
+            this.txtBirdSpecies.Location = new System.Drawing.Point(202, 168);
             this.txtBirdSpecies.Name = "txtBirdSpecies";
             this.txtBirdSpecies.Size = new System.Drawing.Size(218, 34);
             this.txtBirdSpecies.TabIndex = 26;
@@ -125,7 +125,7 @@ namespace TheBirdNest
             // 
             this.txtSerialNumberCage.BackColor = System.Drawing.Color.FloralWhite;
             this.txtSerialNumberCage.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSerialNumberCage.Location = new System.Drawing.Point(193, 119);
+            this.txtSerialNumberCage.Location = new System.Drawing.Point(202, 119);
             this.txtSerialNumberCage.Name = "txtSerialNumberCage";
             this.txtSerialNumberCage.Size = new System.Drawing.Size(218, 34);
             this.txtSerialNumberCage.TabIndex = 24;
@@ -145,7 +145,7 @@ namespace TheBirdNest
             // 
             this.txtCageHigh.BackColor = System.Drawing.Color.FloralWhite;
             this.txtCageHigh.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.txtCageHigh.Location = new System.Drawing.Point(193, 270);
+            this.txtCageHigh.Location = new System.Drawing.Point(202, 270);
             this.txtCageHigh.Name = "txtCageHigh";
             this.txtCageHigh.Size = new System.Drawing.Size(218, 34);
             this.txtCageHigh.TabIndex = 43;
@@ -184,7 +184,7 @@ namespace TheBirdNest
             "Iron",
             "Wood",
             "Plastic"});
-            this.comboBoxCageMat.Location = new System.Drawing.Point(193, 328);
+            this.comboBoxCageMat.Location = new System.Drawing.Point(202, 328);
             this.comboBoxCageMat.Name = "comboBoxCageMat";
             this.comboBoxCageMat.Size = new System.Drawing.Size(218, 33);
             this.comboBoxCageMat.TabIndex = 46;

@@ -67,7 +67,7 @@ namespace TheBirdNest
             // 
             this.txtSerialNumberBird.BackColor = System.Drawing.Color.FloralWhite;
             this.txtSerialNumberBird.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSerialNumberBird.Location = new System.Drawing.Point(176, 90);
+            this.txtSerialNumberBird.Location = new System.Drawing.Point(185, 90);
             this.txtSerialNumberBird.Name = "txtSerialNumberBird";
             this.txtSerialNumberBird.Size = new System.Drawing.Size(218, 34);
             this.txtSerialNumberBird.TabIndex = 1;
@@ -116,7 +116,7 @@ namespace TheBirdNest
             // 
             this.txtBirdCageNumber.BackColor = System.Drawing.Color.FloralWhite;
             this.txtBirdCageNumber.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.txtBirdCageNumber.Location = new System.Drawing.Point(176, 335);
+            this.txtBirdCageNumber.Location = new System.Drawing.Point(185, 335);
             this.txtBirdCageNumber.Name = "txtBirdCageNumber";
             this.txtBirdCageNumber.Size = new System.Drawing.Size(218, 34);
             this.txtBirdCageNumber.TabIndex = 11;
@@ -135,7 +135,7 @@ namespace TheBirdNest
             // 
             this.txtBirdFatherSerialNumber.BackColor = System.Drawing.Color.FloralWhite;
             this.txtBirdFatherSerialNumber.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.txtBirdFatherSerialNumber.Location = new System.Drawing.Point(176, 388);
+            this.txtBirdFatherSerialNumber.Location = new System.Drawing.Point(185, 388);
             this.txtBirdFatherSerialNumber.Name = "txtBirdFatherSerialNumber";
             this.txtBirdFatherSerialNumber.Size = new System.Drawing.Size(218, 34);
             this.txtBirdFatherSerialNumber.TabIndex = 13;
@@ -154,7 +154,7 @@ namespace TheBirdNest
             // 
             this.txtBirdMotherSN.BackColor = System.Drawing.Color.FloralWhite;
             this.txtBirdMotherSN.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.txtBirdMotherSN.Location = new System.Drawing.Point(176, 438);
+            this.txtBirdMotherSN.Location = new System.Drawing.Point(185, 438);
             this.txtBirdMotherSN.Name = "txtBirdMotherSN";
             this.txtBirdMotherSN.Size = new System.Drawing.Size(218, 34);
             this.txtBirdMotherSN.TabIndex = 15;
@@ -192,7 +192,7 @@ namespace TheBirdNest
             this.dateBirdHatchingDate.CustomFormat = "dd-MM-yyyy";
             this.dateBirdHatchingDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateBirdHatchingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateBirdHatchingDate.Location = new System.Drawing.Point(176, 241);
+            this.dateBirdHatchingDate.Location = new System.Drawing.Point(185, 241);
             this.dateBirdHatchingDate.MaxDate = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
             this.dateBirdHatchingDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateBirdHatchingDate.Name = "dateBirdHatchingDate";
@@ -204,7 +204,7 @@ namespace TheBirdNest
             // 
             this.radiobtnBirdMaleGender.AutoSize = true;
             this.radiobtnBirdMaleGender.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radiobtnBirdMaleGender.Location = new System.Drawing.Point(176, 292);
+            this.radiobtnBirdMaleGender.Location = new System.Drawing.Point(185, 292);
             this.radiobtnBirdMaleGender.Name = "radiobtnBirdMaleGender";
             this.radiobtnBirdMaleGender.Size = new System.Drawing.Size(70, 27);
             this.radiobtnBirdMaleGender.TabIndex = 20;
@@ -216,7 +216,7 @@ namespace TheBirdNest
             // 
             this.radiobtnBirdFeMaleGender.AutoSize = true;
             this.radiobtnBirdFeMaleGender.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radiobtnBirdFeMaleGender.Location = new System.Drawing.Point(264, 294);
+            this.radiobtnBirdFeMaleGender.Location = new System.Drawing.Point(273, 294);
             this.radiobtnBirdFeMaleGender.Name = "radiobtnBirdFeMaleGender";
             this.radiobtnBirdFeMaleGender.Size = new System.Drawing.Size(88, 27);
             this.radiobtnBirdFeMaleGender.TabIndex = 22;
@@ -255,7 +255,7 @@ namespace TheBirdNest
             "American Goldian",
             "European Goldian",
             "Australian Goldian"});
-            this.comboBoxBirdSpe.Location = new System.Drawing.Point(176, 139);
+            this.comboBoxBirdSpe.Location = new System.Drawing.Point(185, 139);
             this.comboBoxBirdSpe.Name = "comboBoxBirdSpe";
             this.comboBoxBirdSpe.Size = new System.Drawing.Size(218, 33);
             this.comboBoxBirdSpe.TabIndex = 45;
@@ -266,7 +266,7 @@ namespace TheBirdNest
             this.comboBoxBirdSubSpe.Enabled = false;
             this.comboBoxBirdSubSpe.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBirdSubSpe.FormattingEnabled = true;
-            this.comboBoxBirdSubSpe.Location = new System.Drawing.Point(176, 190);
+            this.comboBoxBirdSubSpe.Location = new System.Drawing.Point(185, 190);
             this.comboBoxBirdSubSpe.Name = "comboBoxBirdSubSpe";
             this.comboBoxBirdSubSpe.Size = new System.Drawing.Size(218, 33);
             this.comboBoxBirdSubSpe.TabIndex = 47;
