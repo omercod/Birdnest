@@ -141,13 +141,33 @@ namespace TheBirdNest
                     " speacial character.", "Error Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (txtID.Text.Length != 9)
+            //ID Error
+            if (txtID.Text.Length != 9 || txtID.Text.Count(c => Char.IsNumber(c)) != 9)
             {
-                MessageBox.Show("Please enter a 9 digits ID.", "Error Username"
+                MessageBox.Show("Please enter a 9 digits ID.", "Error ID"
                     , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            int id = int.Parse(txtID.Text);
+            Excel excel = new Excel(@"C:\Users\omcl9\source\repos\TheBirdNest\BirdNessXl.xlsx", 1);
+            int i = 1;
+            while (excel.readCell(i, 3) != "")
+            {
+                if (txtID.Text == excel.readCell(i,3))
+                {
+                    MessageBox.Show("ID: "+ txtID.Text + " is allready exist", "Error ID"
+                                      , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                i++;
+            }
+            excel.writeToCell(i, userName,pass,txtID.Text);
+            excel.Save();
+            MessageBox.Show(userName + " You Signed Up!", "Congratulations"
+                             , MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Home HomeMenu = new Home();
+            HomeMenu.Show();
+            this.Hide();
+            excel.Close();
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)

@@ -39,9 +39,9 @@ namespace TheBirdNest
             this.btnLogIn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtPassword = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtUserLogIn = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -80,6 +80,7 @@ namespace TheBirdNest
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.txtUserLogIn);
             this.panel2.Controls.Add(this.labelCreateAccount);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.checkBoxShowPass);
@@ -88,7 +89,6 @@ namespace TheBirdNest
             this.panel2.Controls.Add(this.txtPassword);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.txtUserLogIn);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(184, 110);
@@ -161,17 +161,27 @@ namespace TheBirdNest
             // 
             this.txtPassword.BackColor = System.Drawing.Color.White;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.DarkGray;
             this.txtPassword.Location = new System.Drawing.Point(220, 250);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(297, 20);
+            this.txtPassword.Size = new System.Drawing.Size(297, 23);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.TabStop = false;
             this.txtPassword.Text = "Password";
-            this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::TheBirdNest.Properties.Resources.icons8_password_30;
+            this.pictureBox3.Location = new System.Drawing.Point(177, 237);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
             // 
             // panel3
             // 
@@ -185,28 +195,17 @@ namespace TheBirdNest
             // 
             this.txtUserLogIn.BackColor = System.Drawing.Color.White;
             this.txtUserLogIn.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUserLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserLogIn.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserLogIn.ForeColor = System.Drawing.Color.DarkGray;
             this.txtUserLogIn.Location = new System.Drawing.Point(220, 193);
             this.txtUserLogIn.Name = "txtUserLogIn";
-            this.txtUserLogIn.Size = new System.Drawing.Size(297, 20);
+            this.txtUserLogIn.Size = new System.Drawing.Size(297, 23);
             this.txtUserLogIn.TabIndex = 5;
             this.txtUserLogIn.TabStop = false;
             this.txtUserLogIn.Text = "Username";
             this.txtUserLogIn.TextChanged += new System.EventHandler(this.txtUserLogIn_TextChanged_1);
             this.txtUserLogIn.Enter += new System.EventHandler(this.txtUserLogIn_Enter);
             this.txtUserLogIn.Leave += new System.EventHandler(this.txtUserLogIn_Leave);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::TheBirdNest.Properties.Resources.icons8_password_30;
-            this.pictureBox3.Location = new System.Drawing.Point(177, 237);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
