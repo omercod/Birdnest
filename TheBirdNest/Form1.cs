@@ -15,11 +15,19 @@ namespace TheBirdNest
         public Form1()
         {
             InitializeComponent();
+
         }
+
+        /*public void openFile()
+        {
+            Excel excel = new Excel(@"C:\Users\omcl9\source\repos\TheBirdNest\BirdNessXl.xlsx", 1);
+            string s = excel.readCell(1, 0);
+        }*/
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //openFile();
         }
 
 
@@ -99,9 +107,32 @@ namespace TheBirdNest
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            Home HomeMenu = new Home();
-            HomeMenu.Show();
-            this.Hide();
+            string user = txtUserLogIn.Text;
+            string pass = txtPassword.Text;
+            Excel excel = new Excel(@"C:\Users\omcl9\source\repos\TheBirdNest\BirdNessXl.xlsx", 1);
+            int i = 1;
+            while (excel.readCell(i, 0) != "")
+            {
+                if (user== excel.readCell(i, 0))
+                {
+                    if (pass == excel.readCell(i, 1))
+                    {
+                        Home HomeMenu = new Home();
+                        HomeMenu.Show();
+                        this.Hide();
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Password is not correct", "Error"
+                           , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+                i++;
+            }
+            MessageBox.Show("Username not exsist", "Error"
+              , MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void labelCreateAccount_Click(object sender, EventArgs e)
