@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.radiobtnSearchBirdFeMaleGender = new System.Windows.Forms.RadioButton();
-            this.radiobtnSearchBirdMaleGender = new System.Windows.Forms.RadioButton();
             this.dateSearchBirdHatchingDate = new System.Windows.Forms.DateTimePicker();
             this.lblSearchBird = new System.Windows.Forms.TextBox();
             this.lblSearchBirdGender = new System.Windows.Forms.Label();
@@ -39,35 +37,13 @@
             this.lblSerialNumberSearchBird = new System.Windows.Forms.Label();
             this.btnToSearchBird = new System.Windows.Forms.Button();
             this.txtBirdSpecies = new System.Windows.Forms.TextBox();
+            this.cmbBirdGender = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // radiobtnSearchBirdFeMaleGender
-            // 
-            this.radiobtnSearchBirdFeMaleGender.AutoSize = true;
-            this.radiobtnSearchBirdFeMaleGender.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radiobtnSearchBirdFeMaleGender.Location = new System.Drawing.Point(329, 259);
-            this.radiobtnSearchBirdFeMaleGender.Name = "radiobtnSearchBirdFeMaleGender";
-            this.radiobtnSearchBirdFeMaleGender.Size = new System.Drawing.Size(88, 27);
-            this.radiobtnSearchBirdFeMaleGender.TabIndex = 42;
-            this.radiobtnSearchBirdFeMaleGender.TabStop = true;
-            this.radiobtnSearchBirdFeMaleGender.Text = "Female";
-            this.radiobtnSearchBirdFeMaleGender.UseVisualStyleBackColor = true;
-            // 
-            // radiobtnSearchBirdMaleGender
-            // 
-            this.radiobtnSearchBirdMaleGender.AutoSize = true;
-            this.radiobtnSearchBirdMaleGender.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radiobtnSearchBirdMaleGender.Location = new System.Drawing.Point(241, 257);
-            this.radiobtnSearchBirdMaleGender.Name = "radiobtnSearchBirdMaleGender";
-            this.radiobtnSearchBirdMaleGender.Size = new System.Drawing.Size(70, 27);
-            this.radiobtnSearchBirdMaleGender.TabIndex = 41;
-            this.radiobtnSearchBirdMaleGender.TabStop = true;
-            this.radiobtnSearchBirdMaleGender.Text = "Male";
-            this.radiobtnSearchBirdMaleGender.UseVisualStyleBackColor = true;
             // 
             // dateSearchBirdHatchingDate
             // 
             this.dateSearchBirdHatchingDate.CalendarFont = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateSearchBirdHatchingDate.CalendarMonthBackground = System.Drawing.Color.FloralWhite;
             this.dateSearchBirdHatchingDate.CustomFormat = "dd-MM-yyyy";
             this.dateSearchBirdHatchingDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateSearchBirdHatchingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -167,14 +143,27 @@
             this.txtBirdSpecies.Size = new System.Drawing.Size(218, 34);
             this.txtBirdSpecies.TabIndex = 26;
             // 
+            // cmbBirdGender
+            // 
+            this.cmbBirdGender.BackColor = System.Drawing.Color.FloralWhite;
+            this.cmbBirdGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBirdGender.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBirdGender.FormattingEnabled = true;
+            this.cmbBirdGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cmbBirdGender.Location = new System.Drawing.Point(241, 256);
+            this.cmbBirdGender.Name = "cmbBirdGender";
+            this.cmbBirdGender.Size = new System.Drawing.Size(188, 33);
+            this.cmbBirdGender.TabIndex = 49;
+            // 
             // UserControlBirdSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.Controls.Add(this.cmbBirdGender);
             this.Controls.Add(this.btnToSearchBird);
-            this.Controls.Add(this.radiobtnSearchBirdFeMaleGender);
-            this.Controls.Add(this.radiobtnSearchBirdMaleGender);
             this.Controls.Add(this.dateSearchBirdHatchingDate);
             this.Controls.Add(this.lblSearchBird);
             this.Controls.Add(this.lblSearchBirdGender);
@@ -192,9 +181,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.RadioButton radiobtnSearchBirdFeMaleGender;
-        private System.Windows.Forms.RadioButton radiobtnSearchBirdMaleGender;
         private System.Windows.Forms.DateTimePicker dateSearchBirdHatchingDate;
         private System.Windows.Forms.TextBox lblSearchBird;
         private System.Windows.Forms.Label lblSearchBirdGender;
@@ -204,5 +190,6 @@
         private System.Windows.Forms.Label lblSerialNumberSearchBird;
         private System.Windows.Forms.Button btnToSearchBird;
         private System.Windows.Forms.TextBox txtBirdSpecies;
+        private System.Windows.Forms.ComboBox cmbBirdGender;
     }
 }

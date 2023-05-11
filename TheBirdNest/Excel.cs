@@ -47,7 +47,7 @@ namespace TheBirdNest
         }
         public void Close()
         {
-            wb.Close(0);
+            wb.Close();
             excel.Quit();
             excel = null;
             var process = System.Diagnostics.Process.GetProcessesByName("Excel");

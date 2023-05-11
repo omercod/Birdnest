@@ -203,6 +203,26 @@ namespace TheBirdNest.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cancel_40 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cancel-40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_cancel_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cancel-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_freedom_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-freedom-100", resourceCulture);
@@ -226,6 +246,16 @@ namespace TheBirdNest.Properties {
         internal static System.Drawing.Bitmap icons8_identification_documents_26 {
             get {
                 object obj = ResourceManager.GetObject("icons8-identification-documents-26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_minimize_40 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-minimize-40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -30,8 +30,12 @@ namespace TheBirdNest
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelControl = new System.Windows.Forms.Panel();
+            this.pictMinimize = new System.Windows.Forms.PictureBox();
+            this.picExit = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtUserLogIn = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtID = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -43,11 +47,13 @@ namespace TheBirdNest
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtUserLogIn = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
+            this.panelControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExit)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -58,6 +64,7 @@ namespace TheBirdNest
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SaddleBrown;
+            this.panel1.Controls.Add(this.panelControl);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
@@ -65,13 +72,53 @@ namespace TheBirdNest
             this.panel1.Size = new System.Drawing.Size(1085, 655);
             this.panel1.TabIndex = 4;
             // 
+            // panelControl
+            // 
+            this.panelControl.BackColor = System.Drawing.Color.Linen;
+            this.panelControl.Controls.Add(this.pictMinimize);
+            this.panelControl.Controls.Add(this.picExit);
+            this.panelControl.Location = new System.Drawing.Point(0, 0);
+            this.panelControl.Name = "panelControl";
+            this.panelControl.Size = new System.Drawing.Size(1085, 53);
+            this.panelControl.TabIndex = 13;
+            this.panelControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelControl_MouseDown);
+            this.panelControl.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelControl_MouseMove);
+            // 
+            // pictMinimize
+            // 
+            this.pictMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.pictMinimize.BackgroundImage = global::TheBirdNest.Properties.Resources.icons8_minimize_40;
+            this.pictMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictMinimize.Location = new System.Drawing.Point(967, 2);
+            this.pictMinimize.Margin = new System.Windows.Forms.Padding(0);
+            this.pictMinimize.Name = "pictMinimize";
+            this.pictMinimize.Size = new System.Drawing.Size(40, 40);
+            this.pictMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictMinimize.TabIndex = 12;
+            this.pictMinimize.TabStop = false;
+            this.pictMinimize.Click += new System.EventHandler(this.picMinimize_Click);
+            // 
+            // picExit
+            // 
+            this.picExit.BackColor = System.Drawing.Color.Transparent;
+            this.picExit.BackgroundImage = global::TheBirdNest.Properties.Resources.icons8_cancel_40;
+            this.picExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picExit.Location = new System.Drawing.Point(1022, 2);
+            this.picExit.Margin = new System.Windows.Forms.Padding(0);
+            this.picExit.Name = "picExit";
+            this.picExit.Size = new System.Drawing.Size(40, 40);
+            this.picExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picExit.TabIndex = 11;
+            this.picExit.TabStop = false;
+            this.picExit.Click += new System.EventHandler(this.picExit_Click);
+            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.SaddleBrown;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(401, 52);
+            this.textBox1.Location = new System.Drawing.Point(401, 71);
             this.textBox1.Margin = new System.Windows.Forms.Padding(0);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -98,11 +145,25 @@ namespace TheBirdNest
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(184, 110);
+            this.panel2.Location = new System.Drawing.Point(184, 137);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(728, 476);
             this.panel2.TabIndex = 5;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // txtUserLogIn
+            // 
+            this.txtUserLogIn.BackColor = System.Drawing.Color.White;
+            this.txtUserLogIn.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUserLogIn.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserLogIn.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtUserLogIn.Location = new System.Drawing.Point(220, 167);
+            this.txtUserLogIn.Name = "txtUserLogIn";
+            this.txtUserLogIn.Size = new System.Drawing.Size(297, 23);
+            this.txtUserLogIn.TabIndex = 5;
+            this.txtUserLogIn.TabStop = false;
+            this.txtUserLogIn.Text = "Username";
+            this.txtUserLogIn.Enter += new System.EventHandler(this.txtUserLogIn_Enter);
+            this.txtUserLogIn.Leave += new System.EventHandler(this.txtUserLogIn_Leave);
             // 
             // panel5
             // 
@@ -211,7 +272,6 @@ namespace TheBirdNest
             this.txtPassword.TabIndex = 5;
             this.txtPassword.TabStop = false;
             this.txtPassword.Text = "Password";
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
@@ -233,21 +293,6 @@ namespace TheBirdNest
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(360, 1);
             this.panel3.TabIndex = 3;
-            // 
-            // txtUserLogIn
-            // 
-            this.txtUserLogIn.BackColor = System.Drawing.Color.White;
-            this.txtUserLogIn.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUserLogIn.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserLogIn.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtUserLogIn.Location = new System.Drawing.Point(220, 167);
-            this.txtUserLogIn.Name = "txtUserLogIn";
-            this.txtUserLogIn.Size = new System.Drawing.Size(297, 23);
-            this.txtUserLogIn.TabIndex = 5;
-            this.txtUserLogIn.TabStop = false;
-            this.txtUserLogIn.Text = "Username";
-            this.txtUserLogIn.Enter += new System.EventHandler(this.txtUserLogIn_Enter);
-            this.txtUserLogIn.Leave += new System.EventHandler(this.txtUserLogIn_Leave);
             // 
             // pictureBox2
             // 
@@ -277,11 +322,16 @@ namespace TheBirdNest
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 653);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSign_up";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSign_up";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelControl.ResumeLayout(false);
+            this.panelControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExit)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -312,5 +362,8 @@ namespace TheBirdNest
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panelControl;
+        private System.Windows.Forms.PictureBox pictMinimize;
+        private System.Windows.Forms.PictureBox picExit;
     }
 }

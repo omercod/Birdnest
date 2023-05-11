@@ -15,46 +15,30 @@ namespace TheBirdNest
         public Form1()
         {
             InitializeComponent();
-
+            this.MouseDown += new MouseEventHandler(panelControl_MouseDown);
+            this.MouseMove += new MouseEventHandler(panelControl_MouseMove);
         }
-
-        /*public void openFile()
+        //Excel
+        Excel excel;
+        //Panel Control
+        private Point mouseDownLocation;
+        private void panelControl_MouseDown(object sender, MouseEventArgs e)
         {
-            Excel excel = new Excel(@"C:\Users\omcl9\source\repos\TheBirdNest\BirdNessXl.xlsx", 1);
-            string s = excel.readCell(1, 0);
-        }*/
+            mouseDownLocation = e.Location;
+        }
+        private void panelControl_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left = e.X + this.Left - mouseDownLocation.X;
+                this.Top = e.Y + this.Top - mouseDownLocation.Y;
+            }
+        }
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
             //openFile();
-        }
-
-
-        private void txtUserLogIn_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtUserLogIn_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void txtPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBoxShowPass_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBoxShowPass.Checked)
-            {
-                txtPassword.PasswordChar = '\0';
-            }
-            else
-            {
-                txtPassword.PasswordChar = '*';
-            }
         }
 
         private void txtUserLogIn_Enter(object sender, EventArgs e)
@@ -72,6 +56,14 @@ namespace TheBirdNest
             {
                 txtUserLogIn.Text = "Username";
                 txtUserLogIn.ForeColor = Color.DarkGray;
+                if (checkBoxShowPass.Checked)
+                {
+                    txtPassword.PasswordChar = '\0';
+                }
+                else
+                {
+                    txtPassword.PasswordChar = '*';
+                }
             }
         }
 
@@ -81,7 +73,14 @@ namespace TheBirdNest
             {
                 txtPassword.Text = "";
                 txtPassword.ForeColor = Color.Black;
-                txtPassword.PasswordChar = '*';
+                if (checkBoxShowPass.Checked)
+                {
+                    txtPassword.PasswordChar = '\0';
+                }
+                else
+                {
+                    txtPassword.PasswordChar = '*';
+                }
             }
         }
 
@@ -92,6 +91,22 @@ namespace TheBirdNest
                 txtPassword.Text = "Password";
                 txtPassword.ForeColor = Color.DarkGray;
                 txtPassword.PasswordChar = '\0';
+            }
+        }
+
+        private void checkBoxShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txtPassword.Text != "Password" && checkBoxShowPass.Checked)
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            if (txtPassword.Text == "Password" && checkBoxShowPass.Checked)
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            if (!checkBoxShowPass.Checked)
+            {
+                txtPassword.PasswordChar = '*';
             }
         }
 
@@ -109,15 +124,16 @@ namespace TheBirdNest
         {
             string user = txtUserLogIn.Text;
             string pass = txtPassword.Text;
-            Excel excel = new Excel(@"C:\Users\omcl9\source\repos\TheBirdNest\BirdNessXl.xlsx", 1);
+            if (excel == null)
+                excel = new Excel(@"C:\Users\omcl9\source\repos\TheBirdNest\BirdNessXl.xlsx", 1);
             int i = 1;
-            while (excel.readCell(i, 0) != "")
+            while (excel.readCell(i, 1) != "")
             {
-                if (user== excel.readCell(i, 0))
+                if (user== excel.readCell(i, 1))
                 {
-                    if (pass == excel.readCell(i, 1))
+                    if (pass == excel.readCell(i, 2))
                     {
-                        Home HomeMenu = new Home();
+                        Home HomeMenu = new Home(user);
                         HomeMenu.Show();
                         this.Hide();
                         return;
@@ -142,9 +158,17 @@ namespace TheBirdNest
             this.Hide();
         }
 
-        private void txtUserLogIn_TextChanged_1(object sender, EventArgs e)
+        private void picExit_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
+            if(excel != null)
+                excel.Close();
         }
+
+        private void picMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
     }
 }

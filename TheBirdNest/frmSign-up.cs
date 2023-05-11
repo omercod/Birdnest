@@ -15,15 +15,37 @@ namespace TheBirdNest
         public frmSign_up()
         {
             InitializeComponent();
+            this.MouseDown += new MouseEventHandler(panelControl_MouseDown);
+            this.MouseMove += new MouseEventHandler(panelControl_MouseMove);
+            
         }
-
+        //Excel
+        Excel excel;
+        //Panel Control
+        private Point mouseDownLocation;
+        private void panelControl_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownLocation = e.Location;
+        }
+        private void panelControl_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left = e.X + this.Left - mouseDownLocation.X;
+                this.Top = e.Y + this.Top - mouseDownLocation.Y;
+            }
+        }
         private void checkBoxShowPass_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBoxShowPass.Checked)
+            if (txtPassword.Text != "Password" && checkBoxShowPass.Checked)
             {
                 txtPassword.PasswordChar = '\0';
             }
-            else
+            if (txtPassword.Text == "Password" && checkBoxShowPass.Checked)
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            if (!checkBoxShowPass.Checked)
             {
                 txtPassword.PasswordChar = '*';
             }
@@ -53,7 +75,14 @@ namespace TheBirdNest
             {
                 txtPassword.Text = "";
                 txtPassword.ForeColor = Color.Black;
-                txtPassword.PasswordChar = '*';
+                if (checkBoxShowPass.Checked)
+                {
+                    txtPassword.PasswordChar = '\0';
+                }
+                else
+                {
+                    txtPassword.PasswordChar = '*';
+                }
             }
         }
 
@@ -63,7 +92,14 @@ namespace TheBirdNest
             {
                 txtPassword.Text = "Password";
                 txtPassword.ForeColor = Color.DarkGray;
-                txtPassword.PasswordChar = '\0';
+                if (checkBoxShowPass.Checked)
+                {
+                    txtPassword.PasswordChar = '\0';
+                }
+                else
+                {
+                    txtPassword.PasswordChar = '*';
+                }
             }
         }
 
@@ -84,6 +120,7 @@ namespace TheBirdNest
                 txtID.ForeColor = Color.DarkGray;
             }
         }
+
 
         private void labelLogin_MouseHover(object sender, EventArgs e)
         {
@@ -109,6 +146,11 @@ namespace TheBirdNest
             int userNameLetters = userName.Count(c => Char.IsLetter(c));
             int passDigits = pass.Count(c => Char.IsNumber(c));
             int passLetters = pass.Count(c => Char.IsLetter(c));
+
+            //Excel
+            if (excel == null)
+                excel = new Excel(@"C:\Users\omcl9\source\repos\TheBirdNest\BirdNessXl.xlsx", 1);
+
             //userName Error
             if (userName.Length < 6 || userName.Length > 8)
             {
@@ -128,7 +170,19 @@ namespace TheBirdNest
                     , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            //password Error
+            int i = 1;
+            while (excel.readCell(i, 1) != "")
+            {
+                if (userName == excel.readCell(i, 1))
+                {
+                    MessageBox.Show("User: " + txtUserLogIn.Text + " is allready exist", "Error Username"
+                                      , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                i++;
+            }
+
+            //Password Error
             if (pass.Length < 8 || pass.Length > 10)
             {
                 MessageBox.Show(pass + " is not vaild." + "\nPassword must include 8-10 characters.", "Error Password"
@@ -141,6 +195,7 @@ namespace TheBirdNest
                     " speacial character.", "Error Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             //ID Error
             if (txtID.Text.Length != 9 || txtID.Text.Count(c => Char.IsNumber(c)) != 9)
             {
@@ -148,8 +203,7 @@ namespace TheBirdNest
                     , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            Excel excel = new Excel(@"C:\Users\omcl9\source\repos\TheBirdNest\BirdNessXl.xlsx", 1);
-            int i = 1;
+            i = 1;
             while (excel.readCell(i, 3) != "")
             {
                 if (txtID.Text == excel.readCell(i,3))
@@ -160,24 +214,26 @@ namespace TheBirdNest
                 }
                 i++;
             }
+
             excel.writeToCell(i, userName,pass,txtID.Text);
             excel.Save();
             MessageBox.Show(userName + " You Signed Up!", "Congratulations"
                              , MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Home HomeMenu = new Home();
+            Home HomeMenu = new Home(userName);
             HomeMenu.Show();
             this.Hide();
-            excel.Close();
         }
 
-        private void txtPassword_TextChanged(object sender, EventArgs e)
+        private void picExit_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
+            if (excel != null)
+                excel.Close();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void picMinimize_Click(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

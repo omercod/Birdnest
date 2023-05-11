@@ -165,6 +165,7 @@ namespace TheBirdNest
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::TheBirdNest.Properties.Resources.icons8_freedom_100;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Location = new System.Drawing.Point(514, 177);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";

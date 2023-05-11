@@ -33,7 +33,6 @@ namespace TheBirdNest
             this.txtMenu = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.userControlAddCage1 = new TheBirdNest.UserControlAddCage();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,13 +43,18 @@ namespace TheBirdNest
             this.bttnAddBird = new System.Windows.Forms.Button();
             this.btnAddCage = new System.Windows.Forms.Button();
             this.btnSearchBird = new System.Windows.Forms.Button();
-            this.userControlAddBird1 = new TheBirdNest.userControlAddBird();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblHatchingDate = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panelControl = new System.Windows.Forms.Panel();
+            this.pictMinimize = new System.Windows.Forms.PictureBox();
+            this.picExit = new System.Windows.Forms.PictureBox();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.userControlAddBird1 = new TheBirdNest.userControlAddBird();
             this.userControlBirdSearch1 = new TheBirdNest.UserControlBirdSearch();
+            this.userControlAddCage1 = new TheBirdNest.UserControlAddCage();
             this.panel2.SuspendLayout();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -59,6 +63,9 @@ namespace TheBirdNest
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panelControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExit)).BeginInit();
             this.SuspendLayout();
             // 
             // txtMenu
@@ -90,8 +97,7 @@ namespace TheBirdNest
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.panelMenu.Controls.Add(this.userControlBirdSearch1);
-            this.panelMenu.Controls.Add(this.userControlAddCage1);
+            this.panelMenu.Controls.Add(this.lblWelcome);
             this.panelMenu.Controls.Add(this.textBox1);
             this.panelMenu.Controls.Add(this.pictureBox3);
             this.panelMenu.Controls.Add(this.pictureBox1);
@@ -103,18 +109,12 @@ namespace TheBirdNest
             this.panelMenu.Controls.Add(this.btnAddCage);
             this.panelMenu.Controls.Add(this.btnSearchBird);
             this.panelMenu.Controls.Add(this.userControlAddBird1);
+            this.panelMenu.Controls.Add(this.userControlBirdSearch1);
+            this.panelMenu.Controls.Add(this.userControlAddCage1);
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(992, 517);
             this.panelMenu.TabIndex = 1;
-            // 
-            // userControlAddCage1
-            // 
-            this.userControlAddCage1.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.userControlAddCage1.Location = new System.Drawing.Point(238, 0);
-            this.userControlAddCage1.Name = "userControlAddCage1";
-            this.userControlAddCage1.Size = new System.Drawing.Size(754, 515);
-            this.userControlAddCage1.TabIndex = 24;
             // 
             // textBox1
             // 
@@ -246,14 +246,6 @@ namespace TheBirdNest
             this.btnSearchBird.UseVisualStyleBackColor = false;
             this.btnSearchBird.Click += new System.EventHandler(this.btnSearchBird_Click);
             // 
-            // userControlAddBird1
-            // 
-            this.userControlAddBird1.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.userControlAddBird1.Location = new System.Drawing.Point(238, -1);
-            this.userControlAddBird1.Name = "userControlAddBird1";
-            this.userControlAddBird1.Size = new System.Drawing.Size(754, 515);
-            this.userControlAddBird1.TabIndex = 22;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SaddleBrown;
@@ -261,6 +253,7 @@ namespace TheBirdNest
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.txtMenu);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panelControl);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1085, 655);
@@ -286,13 +279,79 @@ namespace TheBirdNest
             this.panel3.Size = new System.Drawing.Size(3, 523);
             this.panel3.TabIndex = 7;
             // 
+            // panelControl
+            // 
+            this.panelControl.BackColor = System.Drawing.Color.Transparent;
+            this.panelControl.Controls.Add(this.pictMinimize);
+            this.panelControl.Controls.Add(this.picExit);
+            this.panelControl.Location = new System.Drawing.Point(0, 0);
+            this.panelControl.Name = "panelControl";
+            this.panelControl.Size = new System.Drawing.Size(1085, 53);
+            this.panelControl.TabIndex = 13;
+            this.panelControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelControl_MouseDown);
+            this.panelControl.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelControl_MouseMove);
+            // 
+            // pictMinimize
+            // 
+            this.pictMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.pictMinimize.BackgroundImage = global::TheBirdNest.Properties.Resources.icons8_minimize_40;
+            this.pictMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictMinimize.Location = new System.Drawing.Point(967, 2);
+            this.pictMinimize.Margin = new System.Windows.Forms.Padding(0);
+            this.pictMinimize.Name = "pictMinimize";
+            this.pictMinimize.Size = new System.Drawing.Size(40, 40);
+            this.pictMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictMinimize.TabIndex = 12;
+            this.pictMinimize.TabStop = false;
+            this.pictMinimize.Click += new System.EventHandler(this.picMinimize_Click);
+            // 
+            // picExit
+            // 
+            this.picExit.BackColor = System.Drawing.Color.Transparent;
+            this.picExit.BackgroundImage = global::TheBirdNest.Properties.Resources.icons8_cancel_40;
+            this.picExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picExit.Location = new System.Drawing.Point(1022, 2);
+            this.picExit.Margin = new System.Windows.Forms.Padding(0);
+            this.picExit.Name = "picExit";
+            this.picExit.Size = new System.Drawing.Size(40, 40);
+            this.picExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picExit.TabIndex = 11;
+            this.picExit.TabStop = false;
+            this.picExit.Click += new System.EventHandler(this.picExit_Click);
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Sans Serif Collection", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.Location = new System.Drawing.Point(332, 143);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(205, 59);
+            this.lblWelcome.TabIndex = 26;
+            this.lblWelcome.Text = "Welcome";
+            // 
+            // userControlAddBird1
+            // 
+            this.userControlAddBird1.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.userControlAddBird1.Location = new System.Drawing.Point(238, 3);
+            this.userControlAddBird1.Name = "userControlAddBird1";
+            this.userControlAddBird1.Size = new System.Drawing.Size(754, 515);
+            this.userControlAddBird1.TabIndex = 22;
+            // 
             // userControlBirdSearch1
             // 
             this.userControlBirdSearch1.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.userControlBirdSearch1.Location = new System.Drawing.Point(239, -1);
+            this.userControlBirdSearch1.Location = new System.Drawing.Point(239, 3);
             this.userControlBirdSearch1.Name = "userControlBirdSearch1";
             this.userControlBirdSearch1.Size = new System.Drawing.Size(754, 515);
             this.userControlBirdSearch1.TabIndex = 25;
+            // 
+            // userControlAddCage1
+            // 
+            this.userControlAddCage1.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.userControlAddCage1.Location = new System.Drawing.Point(238, 3);
+            this.userControlAddCage1.Name = "userControlAddCage1";
+            this.userControlAddCage1.Size = new System.Drawing.Size(754, 515);
+            this.userControlAddCage1.TabIndex = 24;
             // 
             // Home
             // 
@@ -300,6 +359,7 @@ namespace TheBirdNest
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 653);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
@@ -313,6 +373,10 @@ namespace TheBirdNest
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelControl.ResumeLayout(false);
+            this.panelControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -341,5 +405,9 @@ namespace TheBirdNest
         private System.Windows.Forms.Label lblHatchingDate;
         private UserControlAddCage userControlAddCage1;
         private UserControlBirdSearch userControlBirdSearch1;
+        private System.Windows.Forms.Panel panelControl;
+        private System.Windows.Forms.PictureBox pictMinimize;
+        private System.Windows.Forms.PictureBox picExit;
+        private System.Windows.Forms.Label lblWelcome;
     }
 }
