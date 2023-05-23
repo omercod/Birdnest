@@ -20,6 +20,7 @@ namespace TheBirdNest
         }
         //Excel
         Excel excel;
+
         //Panel Control
         private Point mouseDownLocation;
         private void panelControl_MouseDown(object sender, MouseEventArgs e)
@@ -125,7 +126,7 @@ namespace TheBirdNest
             string user = txtUserLogIn.Text;
             string pass = txtPassword.Text;
             if (excel == null)
-                excel = new Excel(@"C:\Users\omcl9\source\repos\TheBirdNest\BirdNessXl.xlsx", 1);
+                excel = new Excel(1);
             int i = 1;
             while (excel.readCell(i, 1) != "")
             {
@@ -135,6 +136,8 @@ namespace TheBirdNest
                     {
                         Home HomeMenu = new Home(user);
                         HomeMenu.Show();
+                        excel.closeExecl();
+                        excel.Close();
                         this.Hide();
                         return;
                     }
@@ -170,5 +173,12 @@ namespace TheBirdNest
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Home HomeMenu = new Home("talco12");
+            HomeMenu.Show();
+            this.Hide();
+            return;
+        }
     }
 }

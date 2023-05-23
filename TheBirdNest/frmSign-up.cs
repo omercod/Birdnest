@@ -149,7 +149,7 @@ namespace TheBirdNest
 
             //Excel
             if (excel == null)
-                excel = new Excel(@"C:\Users\omcl9\source\repos\TheBirdNest\BirdNessXl.xlsx", 1);
+                excel = new Excel(1);
 
             //userName Error
             if (userName.Length < 6 || userName.Length > 8)
@@ -217,6 +217,9 @@ namespace TheBirdNest
 
             excel.writeToCell(i, userName,pass,txtID.Text);
             excel.Save();
+            excel.closeExecl();
+            excel.Close();
+            string userID = txtID.Text;
             MessageBox.Show(userName + " You Signed Up!", "Congratulations"
                              , MessageBoxButtons.OK, MessageBoxIcon.Information);
             Home HomeMenu = new Home(userName);

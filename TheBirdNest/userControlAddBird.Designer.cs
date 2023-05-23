@@ -35,7 +35,6 @@ namespace TheBirdNest
             this.lblSubSpecies = new System.Windows.Forms.Label();
             this.lblHatchingDate = new System.Windows.Forms.Label();
             this.lblBirdGender = new System.Windows.Forms.Label();
-            this.txtBirdCageNumber = new System.Windows.Forms.TextBox();
             this.lblCageNumber = new System.Windows.Forms.Label();
             this.txtBirdFatherSerialNumber = new System.Windows.Forms.TextBox();
             this.lblFatherSerialNumber = new System.Windows.Forms.Label();
@@ -63,6 +62,7 @@ namespace TheBirdNest
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnOKforParent = new System.Windows.Forms.Button();
+            this.cmbCagesNumber = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictAddBird)).BeginInit();
             this.SuspendLayout();
@@ -71,10 +71,9 @@ namespace TheBirdNest
             // 
             this.lblSerialNumberBird.AutoSize = true;
             this.lblSerialNumberBird.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSerialNumberBird.Location = new System.Drawing.Point(12, 59);
-            this.lblSerialNumberBird.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSerialNumberBird.Location = new System.Drawing.Point(16, 73);
             this.lblSerialNumberBird.Name = "lblSerialNumberBird";
-            this.lblSerialNumberBird.Size = new System.Drawing.Size(125, 21);
+            this.lblSerialNumberBird.Size = new System.Drawing.Size(154, 28);
             this.lblSerialNumberBird.TabIndex = 0;
             this.lblSerialNumberBird.Text = "Serial Number:";
             // 
@@ -82,20 +81,19 @@ namespace TheBirdNest
             // 
             this.txtSerialNumberBird.BackColor = System.Drawing.Color.FloralWhite;
             this.txtSerialNumberBird.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSerialNumberBird.Location = new System.Drawing.Point(139, 59);
-            this.txtSerialNumberBird.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSerialNumberBird.Location = new System.Drawing.Point(185, 73);
+            this.txtSerialNumberBird.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSerialNumberBird.Name = "txtSerialNumberBird";
-            this.txtSerialNumberBird.Size = new System.Drawing.Size(142, 29);
+            this.txtSerialNumberBird.Size = new System.Drawing.Size(188, 34);
             this.txtSerialNumberBird.TabIndex = 1;
             // 
             // lblBirdSpecies
             // 
             this.lblBirdSpecies.AutoSize = true;
             this.lblBirdSpecies.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBirdSpecies.Location = new System.Drawing.Point(12, 99);
-            this.lblBirdSpecies.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBirdSpecies.Location = new System.Drawing.Point(16, 122);
             this.lblBirdSpecies.Name = "lblBirdSpecies";
-            this.lblBirdSpecies.Size = new System.Drawing.Size(106, 21);
+            this.lblBirdSpecies.Size = new System.Drawing.Size(132, 28);
             this.lblBirdSpecies.TabIndex = 2;
             this.lblBirdSpecies.Text = "Bird Species:";
             // 
@@ -103,10 +101,9 @@ namespace TheBirdNest
             // 
             this.lblSubSpecies.AutoSize = true;
             this.lblSubSpecies.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubSpecies.Location = new System.Drawing.Point(12, 141);
-            this.lblSubSpecies.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSubSpecies.Location = new System.Drawing.Point(16, 174);
             this.lblSubSpecies.Name = "lblSubSpecies";
-            this.lblSubSpecies.Size = new System.Drawing.Size(104, 21);
+            this.lblSubSpecies.Size = new System.Drawing.Size(128, 28);
             this.lblSubSpecies.TabIndex = 4;
             this.lblSubSpecies.Text = "Sub Species:";
             // 
@@ -114,10 +111,9 @@ namespace TheBirdNest
             // 
             this.lblHatchingDate.AutoSize = true;
             this.lblHatchingDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHatchingDate.Location = new System.Drawing.Point(12, 182);
-            this.lblHatchingDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHatchingDate.Location = new System.Drawing.Point(16, 224);
             this.lblHatchingDate.Name = "lblHatchingDate";
-            this.lblHatchingDate.Size = new System.Drawing.Size(124, 21);
+            this.lblHatchingDate.Size = new System.Drawing.Size(154, 28);
             this.lblHatchingDate.TabIndex = 6;
             this.lblHatchingDate.Text = "Hatching Date:";
             // 
@@ -125,31 +121,19 @@ namespace TheBirdNest
             // 
             this.lblBirdGender.AutoSize = true;
             this.lblBirdGender.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBirdGender.Location = new System.Drawing.Point(12, 223);
-            this.lblBirdGender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBirdGender.Location = new System.Drawing.Point(16, 274);
             this.lblBirdGender.Name = "lblBirdGender";
-            this.lblBirdGender.Size = new System.Drawing.Size(105, 21);
+            this.lblBirdGender.Size = new System.Drawing.Size(131, 28);
             this.lblBirdGender.TabIndex = 8;
             this.lblBirdGender.Text = "Bird Gender:";
-            // 
-            // txtBirdCageNumber
-            // 
-            this.txtBirdCageNumber.BackColor = System.Drawing.Color.FloralWhite;
-            this.txtBirdCageNumber.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.txtBirdCageNumber.Location = new System.Drawing.Point(139, 261);
-            this.txtBirdCageNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtBirdCageNumber.Name = "txtBirdCageNumber";
-            this.txtBirdCageNumber.Size = new System.Drawing.Size(142, 29);
-            this.txtBirdCageNumber.TabIndex = 11;
             // 
             // lblCageNumber
             // 
             this.lblCageNumber.AutoSize = true;
             this.lblCageNumber.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCageNumber.Location = new System.Drawing.Point(12, 258);
-            this.lblCageNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCageNumber.Location = new System.Drawing.Point(16, 318);
             this.lblCageNumber.Name = "lblCageNumber";
-            this.lblCageNumber.Size = new System.Drawing.Size(120, 21);
+            this.lblCageNumber.Size = new System.Drawing.Size(147, 28);
             this.lblCageNumber.TabIndex = 10;
             this.lblCageNumber.Text = "Cage Number:";
             // 
@@ -158,10 +142,10 @@ namespace TheBirdNest
             this.txtBirdFatherSerialNumber.BackColor = System.Drawing.Color.FloralWhite;
             this.txtBirdFatherSerialNumber.Enabled = false;
             this.txtBirdFatherSerialNumber.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.txtBirdFatherSerialNumber.Location = new System.Drawing.Point(139, 329);
-            this.txtBirdFatherSerialNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBirdFatherSerialNumber.Location = new System.Drawing.Point(185, 405);
+            this.txtBirdFatherSerialNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBirdFatherSerialNumber.Name = "txtBirdFatherSerialNumber";
-            this.txtBirdFatherSerialNumber.Size = new System.Drawing.Size(142, 29);
+            this.txtBirdFatherSerialNumber.Size = new System.Drawing.Size(188, 34);
             this.txtBirdFatherSerialNumber.TabIndex = 13;
             this.txtBirdFatherSerialNumber.Text = "Only for baby bird";
             // 
@@ -169,10 +153,9 @@ namespace TheBirdNest
             // 
             this.lblFatherSerialNumber.AutoSize = true;
             this.lblFatherSerialNumber.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFatherSerialNumber.Location = new System.Drawing.Point(21, 329);
-            this.lblFatherSerialNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFatherSerialNumber.Location = new System.Drawing.Point(28, 405);
             this.lblFatherSerialNumber.Name = "lblFatherSerialNumber";
-            this.lblFatherSerialNumber.Size = new System.Drawing.Size(91, 21);
+            this.lblFatherSerialNumber.Size = new System.Drawing.Size(114, 28);
             this.lblFatherSerialNumber.TabIndex = 12;
             this.lblFatherSerialNumber.Text = "Father S.N:";
             // 
@@ -181,10 +164,10 @@ namespace TheBirdNest
             this.txtBirdMotherSN.BackColor = System.Drawing.Color.FloralWhite;
             this.txtBirdMotherSN.Enabled = false;
             this.txtBirdMotherSN.Font = new System.Drawing.Font("Nirmala UI", 12F);
-            this.txtBirdMotherSN.Location = new System.Drawing.Point(139, 370);
-            this.txtBirdMotherSN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBirdMotherSN.Location = new System.Drawing.Point(185, 455);
+            this.txtBirdMotherSN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBirdMotherSN.Name = "txtBirdMotherSN";
-            this.txtBirdMotherSN.Size = new System.Drawing.Size(142, 29);
+            this.txtBirdMotherSN.Size = new System.Drawing.Size(188, 34);
             this.txtBirdMotherSN.TabIndex = 15;
             this.txtBirdMotherSN.Text = "Only for baby bird";
             // 
@@ -192,10 +175,9 @@ namespace TheBirdNest
             // 
             this.lblMotherSN.AutoSize = true;
             this.lblMotherSN.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMotherSN.Location = new System.Drawing.Point(21, 370);
-            this.lblMotherSN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMotherSN.Location = new System.Drawing.Point(28, 455);
             this.lblMotherSN.Name = "lblMotherSN";
-            this.lblMotherSN.Size = new System.Drawing.Size(100, 21);
+            this.lblMotherSN.Size = new System.Drawing.Size(125, 28);
             this.lblMotherSN.TabIndex = 14;
             this.lblMotherSN.Text = "Mother S.N:";
             // 
@@ -203,13 +185,15 @@ namespace TheBirdNest
             // 
             this.lblAddBird.BackColor = System.Drawing.Color.AntiqueWhite;
             this.lblAddBird.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lblAddBird.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblAddBird.Font = new System.Drawing.Font("Nirmala UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddBird.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.lblAddBird.Location = new System.Drawing.Point(166, 8);
+            this.lblAddBird.Location = new System.Drawing.Point(221, 10);
             this.lblAddBird.Margin = new System.Windows.Forms.Padding(0);
             this.lblAddBird.Multiline = true;
             this.lblAddBird.Name = "lblAddBird";
-            this.lblAddBird.Size = new System.Drawing.Size(205, 45);
+            this.lblAddBird.ReadOnly = true;
+            this.lblAddBird.Size = new System.Drawing.Size(273, 55);
             this.lblAddBird.TabIndex = 16;
             this.lblAddBird.TabStop = false;
             this.lblAddBird.Text = "ADD BIRD";
@@ -222,19 +206,19 @@ namespace TheBirdNest
             this.dateBirdHatchingDate.CustomFormat = "dd-MM-yyyy";
             this.dateBirdHatchingDate.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateBirdHatchingDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateBirdHatchingDate.Location = new System.Drawing.Point(139, 182);
-            this.dateBirdHatchingDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dateBirdHatchingDate.MaxDate = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
+            this.dateBirdHatchingDate.Location = new System.Drawing.Point(185, 224);
+            this.dateBirdHatchingDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateBirdHatchingDate.MaxDate = new System.DateTime(2023, 5, 22, 0, 0, 0, 0);
             this.dateBirdHatchingDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateBirdHatchingDate.Name = "dateBirdHatchingDate";
-            this.dateBirdHatchingDate.Size = new System.Drawing.Size(142, 29);
+            this.dateBirdHatchingDate.Size = new System.Drawing.Size(188, 34);
             this.dateBirdHatchingDate.TabIndex = 19;
             this.dateBirdHatchingDate.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = global::TheBirdNest.Properties.Resources.icons8_plus_30;
-            this.pictureBox2.Location = new System.Drawing.Point(466, 362);
+            this.pictureBox2.Location = new System.Drawing.Point(621, 446);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 30);
@@ -246,7 +230,7 @@ namespace TheBirdNest
             // 
             this.pictAddBird.BackgroundImage = global::TheBirdNest.Properties.Resources.icons8_bird_100;
             this.pictAddBird.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictAddBird.Location = new System.Drawing.Point(384, 291);
+            this.pictAddBird.Location = new System.Drawing.Point(512, 358);
             this.pictAddBird.Margin = new System.Windows.Forms.Padding(0);
             this.pictAddBird.Name = "pictAddBird";
             this.pictAddBird.Size = new System.Drawing.Size(100, 100);
@@ -265,10 +249,10 @@ namespace TheBirdNest
             "American Goldian",
             "European Goldian",
             "Australian Goldian"});
-            this.comboBoxBirdSpe.Location = new System.Drawing.Point(139, 99);
-            this.comboBoxBirdSpe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxBirdSpe.Location = new System.Drawing.Point(185, 122);
+            this.comboBoxBirdSpe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxBirdSpe.Name = "comboBoxBirdSpe";
-            this.comboBoxBirdSpe.Size = new System.Drawing.Size(142, 27);
+            this.comboBoxBirdSpe.Size = new System.Drawing.Size(188, 33);
             this.comboBoxBirdSpe.TabIndex = 45;
             this.comboBoxBirdSpe.SelectedIndexChanged += new System.EventHandler(this.comboBoxBirdSpe_SelectedIndexChanged);
             // 
@@ -278,10 +262,10 @@ namespace TheBirdNest
             this.comboBoxBirdSubSpe.Enabled = false;
             this.comboBoxBirdSubSpe.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBirdSubSpe.FormattingEnabled = true;
-            this.comboBoxBirdSubSpe.Location = new System.Drawing.Point(139, 141);
-            this.comboBoxBirdSubSpe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxBirdSubSpe.Location = new System.Drawing.Point(185, 174);
+            this.comboBoxBirdSubSpe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxBirdSubSpe.Name = "comboBoxBirdSubSpe";
-            this.comboBoxBirdSubSpe.Size = new System.Drawing.Size(142, 27);
+            this.comboBoxBirdSubSpe.Size = new System.Drawing.Size(188, 33);
             this.comboBoxBirdSubSpe.TabIndex = 47;
             this.comboBoxBirdSubSpe.Text = "Select Species First";
             // 
@@ -294,10 +278,10 @@ namespace TheBirdNest
             this.cmbBirdGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cmbBirdGender.Location = new System.Drawing.Point(139, 223);
-            this.cmbBirdGender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbBirdGender.Location = new System.Drawing.Point(185, 274);
+            this.cmbBirdGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbBirdGender.Name = "cmbBirdGender";
-            this.cmbBirdGender.Size = new System.Drawing.Size(142, 27);
+            this.cmbBirdGender.Size = new System.Drawing.Size(188, 33);
             this.cmbBirdGender.TabIndex = 48;
             // 
             // label1
@@ -305,10 +289,9 @@ namespace TheBirdNest
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label1.Location = new System.Drawing.Point(11, 291);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(16, 353);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 27);
+            this.label1.Size = new System.Drawing.Size(176, 35);
             this.label1.TabIndex = 49;
             this.label1.Text = "For Baby Bird:";
             // 
@@ -322,30 +305,29 @@ namespace TheBirdNest
             "Red",
             "Yellow",
             "Black"});
-            this.cmbHeadColor.Location = new System.Drawing.Point(383, 154);
-            this.cmbHeadColor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbHeadColor.Location = new System.Drawing.Point(511, 190);
+            this.cmbHeadColor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbHeadColor.Name = "cmbHeadColor";
-            this.cmbHeadColor.Size = new System.Drawing.Size(124, 27);
+            this.cmbHeadColor.Size = new System.Drawing.Size(164, 33);
             this.cmbHeadColor.TabIndex = 51;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(322, 154);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(429, 190);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 21);
+            this.label2.Size = new System.Drawing.Size(66, 28);
             this.label2.TabIndex = 50;
             this.label2.Text = "Head:";
             // 
             // checkBoxBabyBird
             // 
             this.checkBoxBabyBird.AutoSize = true;
-            this.checkBoxBabyBird.Location = new System.Drawing.Point(143, 298);
-            this.checkBoxBabyBird.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxBabyBird.Location = new System.Drawing.Point(198, 362);
+            this.checkBoxBabyBird.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxBabyBird.Name = "checkBoxBabyBird";
-            this.checkBoxBabyBird.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxBabyBird.Size = new System.Drawing.Size(18, 17);
             this.checkBoxBabyBird.TabIndex = 53;
             this.checkBoxBabyBird.UseVisualStyleBackColor = true;
             this.checkBoxBabyBird.CheckedChanged += new System.EventHandler(this.checkBoxBabyBird_CheckedChanged);
@@ -360,20 +342,19 @@ namespace TheBirdNest
             "Purple",
             "Lilac",
             "White"});
-            this.cmbBreastColor.Location = new System.Drawing.Point(383, 192);
-            this.cmbBreastColor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbBreastColor.Location = new System.Drawing.Point(511, 236);
+            this.cmbBreastColor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbBreastColor.Name = "cmbBreastColor";
-            this.cmbBreastColor.Size = new System.Drawing.Size(124, 27);
+            this.cmbBreastColor.Size = new System.Drawing.Size(164, 33);
             this.cmbBreastColor.TabIndex = 55;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(322, 192);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(429, 236);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 21);
+            this.label3.Size = new System.Drawing.Size(77, 28);
             this.label3.TabIndex = 54;
             this.label3.Text = "Breast:";
             // 
@@ -387,21 +368,20 @@ namespace TheBirdNest
             "Green",
             "Yellow",
             "Blue",
-            "SIlver"});
-            this.cmbBodyColor.Location = new System.Drawing.Point(383, 228);
-            this.cmbBodyColor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            "Silver"});
+            this.cmbBodyColor.Location = new System.Drawing.Point(511, 281);
+            this.cmbBodyColor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbBodyColor.Name = "cmbBodyColor";
-            this.cmbBodyColor.Size = new System.Drawing.Size(124, 27);
+            this.cmbBodyColor.Size = new System.Drawing.Size(164, 33);
             this.cmbBodyColor.TabIndex = 57;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(322, 228);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(429, 281);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 21);
+            this.label4.Size = new System.Drawing.Size(65, 28);
             this.label4.TabIndex = 56;
             this.label4.Text = "Body:";
             // 
@@ -410,10 +390,9 @@ namespace TheBirdNest
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Sans Serif Collection", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label5.Location = new System.Drawing.Point(380, 117);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(507, 144);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 27);
+            this.label5.Size = new System.Drawing.Size(150, 35);
             this.label5.TabIndex = 58;
             this.label5.Text = "Bird Colors:";
             // 
@@ -422,10 +401,10 @@ namespace TheBirdNest
             this.panel3.BackColor = System.Drawing.Color.DarkOrange;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.ForeColor = System.Drawing.Color.DarkOrange;
-            this.panel3.Location = new System.Drawing.Point(342, 319);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Location = new System.Drawing.Point(456, 393);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(3, 88);
+            this.panel3.Size = new System.Drawing.Size(3, 107);
             this.panel3.TabIndex = 59;
             // 
             // panel1
@@ -433,10 +412,10 @@ namespace TheBirdNest
             this.panel1.BackColor = System.Drawing.Color.DarkOrange;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.panel1.Location = new System.Drawing.Point(16, 319);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(21, 393);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(326, 3);
+            this.panel1.Size = new System.Drawing.Size(435, 3);
             this.panel1.TabIndex = 60;
             // 
             // panel2
@@ -444,10 +423,10 @@ namespace TheBirdNest
             this.panel2.BackColor = System.Drawing.Color.DarkOrange;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.ForeColor = System.Drawing.Color.DarkOrange;
-            this.panel2.Location = new System.Drawing.Point(16, 405);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(22, 498);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(326, 3);
+            this.panel2.Size = new System.Drawing.Size(436, 3);
             this.panel2.TabIndex = 61;
             // 
             // panel4
@@ -455,10 +434,10 @@ namespace TheBirdNest
             this.panel4.BackColor = System.Drawing.Color.DarkOrange;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.ForeColor = System.Drawing.Color.DarkOrange;
-            this.panel4.Location = new System.Drawing.Point(5, 303);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Location = new System.Drawing.Point(7, 373);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1, 1);
+            this.panel4.Size = new System.Drawing.Size(0, 0);
             this.panel4.TabIndex = 60;
             // 
             // panel5
@@ -466,10 +445,10 @@ namespace TheBirdNest
             this.panel5.BackColor = System.Drawing.Color.DarkOrange;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.ForeColor = System.Drawing.Color.DarkOrange;
-            this.panel5.Location = new System.Drawing.Point(16, 319);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Location = new System.Drawing.Point(21, 393);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(3, 88);
+            this.panel5.Size = new System.Drawing.Size(3, 107);
             this.panel5.TabIndex = 60;
             // 
             // btnOKforParent
@@ -478,19 +457,34 @@ namespace TheBirdNest
             this.btnOKforParent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOKforParent.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOKforParent.ForeColor = System.Drawing.Color.White;
-            this.btnOKforParent.Location = new System.Drawing.Point(294, 349);
-            this.btnOKforParent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOKforParent.Location = new System.Drawing.Point(392, 430);
+            this.btnOKforParent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOKforParent.Name = "btnOKforParent";
-            this.btnOKforParent.Size = new System.Drawing.Size(40, 27);
+            this.btnOKforParent.Size = new System.Drawing.Size(53, 33);
             this.btnOKforParent.TabIndex = 62;
             this.btnOKforParent.Text = "OK";
             this.btnOKforParent.UseVisualStyleBackColor = false;
+            this.btnOKforParent.Click += new System.EventHandler(this.btnOKforParent_Click);
+            // 
+            // cmbCagesNumber
+            // 
+            this.cmbCagesNumber.BackColor = System.Drawing.Color.FloralWhite;
+            this.cmbCagesNumber.Enabled = false;
+            this.cmbCagesNumber.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCagesNumber.FormattingEnabled = true;
+            this.cmbCagesNumber.Location = new System.Drawing.Point(185, 318);
+            this.cmbCagesNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbCagesNumber.Name = "cmbCagesNumber";
+            this.cmbCagesNumber.Size = new System.Drawing.Size(188, 33);
+            this.cmbCagesNumber.TabIndex = 63;
+            this.cmbCagesNumber.Text = "No Cage Added.";
             // 
             // userControlAddBird
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.Controls.Add(this.cmbCagesNumber);
             this.Controls.Add(this.btnOKforParent);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -517,7 +511,6 @@ namespace TheBirdNest
             this.Controls.Add(this.lblMotherSN);
             this.Controls.Add(this.txtBirdFatherSerialNumber);
             this.Controls.Add(this.lblFatherSerialNumber);
-            this.Controls.Add(this.txtBirdCageNumber);
             this.Controls.Add(this.lblCageNumber);
             this.Controls.Add(this.lblBirdGender);
             this.Controls.Add(this.lblHatchingDate);
@@ -525,10 +518,11 @@ namespace TheBirdNest
             this.Controls.Add(this.lblBirdSpecies);
             this.Controls.Add(this.txtSerialNumberBird);
             this.Controls.Add(this.lblSerialNumberBird);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "userControlAddBird";
-            this.Size = new System.Drawing.Size(566, 418);
+            this.Size = new System.Drawing.Size(755, 514);
             this.Load += new System.EventHandler(this.userControlAddBird_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.userControlAddBird_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictAddBird)).EndInit();
             this.ResumeLayout(false);
@@ -544,7 +538,6 @@ namespace TheBirdNest
         private System.Windows.Forms.Label lblSubSpecies;
         private System.Windows.Forms.Label lblHatchingDate;
         private System.Windows.Forms.Label lblBirdGender;
-        private System.Windows.Forms.TextBox txtBirdCageNumber;
         private System.Windows.Forms.Label lblCageNumber;
         private System.Windows.Forms.TextBox txtBirdFatherSerialNumber;
         private System.Windows.Forms.Label lblFatherSerialNumber;
@@ -572,5 +565,6 @@ namespace TheBirdNest
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnOKforParent;
+        private System.Windows.Forms.ComboBox cmbCagesNumber;
     }
 }

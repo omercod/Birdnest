@@ -82,11 +82,29 @@
     <Compile Include="UserControlAddCage.Designer.cs">
       <DependentUpon>UserControlAddCage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlBirdInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlBirdInfo.Designer.cs">
+      <DependentUpon>UserControlBirdInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlCageInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlCageInfo.Designer.cs">
+      <DependentUpon>UserControlCageInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlSearchBird.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlSearchBird.Designer.cs">
       <DependentUpon>UserControlSearchBird.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSearchCage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSearchCage.Designer.cs">
+      <DependentUpon>UserControlSearchCage.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -113,8 +131,17 @@
     <EmbeddedResource Include="UserControlAddCage.resx">
       <DependentUpon>UserControlAddCage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlBirdInfo.resx">
+      <DependentUpon>UserControlBirdInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlCageInfo.resx">
+      <DependentUpon>UserControlCageInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlSearchBird.resx">
       <DependentUpon>UserControlSearchBird.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSearchCage.resx">
+      <DependentUpon>UserControlSearchCage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -248,6 +275,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-minimize-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\bird.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-refresh-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\examplebird %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-parrot-in-a-cage-image_1161373 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-parrot-in-a-cage-image_1161373 %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-parrot-in-a-cage-image_1161373 %283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bird-Cage-PNG-HD-Quality %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bird-Cage-PNG-HD-Quality %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Love-Birds-Transparent-Background %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Love-Birds-Transparent-Background %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Love-Birds-Transparent-Background %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26020-6-flying-bird-transparent-background %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-bird-flock-v-formation-creative-crows-animals-monochrome %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\195-1953195_flying-birds-png %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parrot-png-transparent-clip-art-image-5a3c27b56bdd87.4495528915138917654418-removebg-preview %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
