@@ -585,6 +585,13 @@ namespace TheBirdNest
             }
             MessageBox.Show("Successfully Update", "Bird Update"
                     , MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            lblCageNum.Text = cageN;
+            lblCageNum.Visible = true;
+            cmbCages.Visible = false;
+            btnEditBird.Text = "Edit Bird";
+            panelCgaes.Visible = true;
+            btnUpdate.Visible = false;
         }
     }
 }
