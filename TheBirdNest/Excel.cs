@@ -5,29 +5,29 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Office.Interop.Excel;
 using _Excel= Microsoft.Office.Interop.Excel;
+using System.IO;
 
 namespace TheBirdNest
 {
     class Excel
     {
-        string path = "";
         _Application excel = new _Excel.Application();
-        Workbook wb;
-        Worksheet ws;
+        Workbook workbook;
+        Worksheet worksheet;
 
-        public Excel(string path, int sheet)
+        public Excel(int sheet)
         {
-            this.path = path;
-            wb = excel.Workbooks.Open(path);
-            ws = wb.Worksheets[sheet];
+            string path = "BirdNessXl.xlsx";
+            workbook = excel.Workbooks.Open(Directory.GetCurrentDirectory() + "\\" + path);
+            worksheet = workbook.Worksheets[sheet];
         }
         //Read from Excel
         public string readCell(int i,int j)
         {
             i++;
-            if (ws.Cells[i,j].Value2 !=null)
+            if (worksheet.Cells[i,j].Value2 !=null)
             {
-                return ws.Cells[i, j].Value2.ToString();
+                return worksheet.Cells[i, j].Value2.ToString();
             }
             else
                 return "";
@@ -36,20 +36,17 @@ namespace TheBirdNest
         public void writeToCell(int i, string user, string pass, string id)
         {
             i++;
-            ws.Cells[i, 1].Value2 = user;
-            ws.Cells[i, 2].Value2 = pass;
-            ws.Cells[i, 3].Value2 = id;
+            worksheet.Cells[i, 1].Value2 = user;
+            worksheet.Cells[i, 2].Value2 = pass;
+            worksheet.Cells[i, 3].Value2 = id;
         }
 
         public void Save()
         {
-            wb.Save();
+            workbook.Save();
         }
         public void Close()
         {
-            wb.Close(0);
-            excel.Quit();
-            excel = null;
             var process = System.Diagnostics.Process.GetProcessesByName("Excel");
             foreach (var p in process)
             {
@@ -63,10 +60,16 @@ namespace TheBirdNest
                 }
             }
         }
+        public void closeExecl()
+        {
+            workbook.Close();
+            excel.Quit();
+            excel = null;
+        }
 
         public void saveAs(string path)
         {
-            wb.SaveAs(path);
+            workbook.SaveAs(path);
         }
 
     }
