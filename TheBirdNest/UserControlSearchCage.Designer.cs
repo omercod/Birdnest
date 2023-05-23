@@ -101,7 +101,7 @@
             this.btnToSearchCage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToSearchCage.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnToSearchCage.ForeColor = System.Drawing.Color.White;
-            this.btnToSearchCage.Location = new System.Drawing.Point(277, 145);
+            this.btnToSearchCage.Location = new System.Drawing.Point(258, 145);
             this.btnToSearchCage.Name = "btnToSearchCage";
             this.btnToSearchCage.Size = new System.Drawing.Size(230, 47);
             this.btnToSearchCage.TabIndex = 58;
