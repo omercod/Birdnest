@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dateHatching = new System.Windows.Forms.DateTimePicker();
             this.lblSearchBird = new System.Windows.Forms.TextBox();
             this.btnToSearchBird = new System.Windows.Forms.Button();
@@ -37,8 +38,11 @@
             this.cmbBirdGender = new System.Windows.Forms.ComboBox();
             this.dataSearchBird = new System.Windows.Forms.DataGridView();
             this.picRefresh = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.picBirdsGif = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataSearchBird)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRefresh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBirdsGif)).BeginInit();
             this.SuspendLayout();
             // 
             // dateHatching
@@ -151,9 +155,12 @@
             // 
             // dataSearchBird
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dataSearchBird.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataSearchBird.BackgroundColor = System.Drawing.Color.AntiqueWhite;
             this.dataSearchBird.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataSearchBird.GridColor = System.Drawing.Color.SaddleBrown;
+            this.dataSearchBird.GridColor = System.Drawing.Color.Black;
             this.dataSearchBird.Location = new System.Drawing.Point(0, 220);
             this.dataSearchBird.Name = "dataSearchBird";
             this.dataSearchBird.RowHeadersWidth = 51;
@@ -176,11 +183,25 @@
             this.picRefresh.TabStop = false;
             this.picRefresh.Click += new System.EventHandler(this.picRefresh_Click);
             // 
+            // picBirdsGif
+            // 
+            this.picBirdsGif.BackColor = System.Drawing.Color.Transparent;
+            this.picBirdsGif.BackgroundImage = global::TheBirdNest.Properties.Resources.ezgif_com_resize;
+            this.picBirdsGif.Cursor = System.Windows.Forms.Cursors.Default;
+            this.picBirdsGif.Location = new System.Drawing.Point(129, 220);
+            this.picBirdsGif.Margin = new System.Windows.Forms.Padding(0);
+            this.picBirdsGif.Name = "picBirdsGif";
+            this.picBirdsGif.Size = new System.Drawing.Size(429, 177);
+            this.picBirdsGif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBirdsGif.TabIndex = 134;
+            this.picBirdsGif.TabStop = false;
+            // 
             // UserControlBirdSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.Controls.Add(this.picBirdsGif);
             this.Controls.Add(this.picRefresh);
             this.Controls.Add(this.dataSearchBird);
             this.Controls.Add(this.cmbBirdGender);
@@ -195,6 +216,7 @@
             this.Load += new System.EventHandler(this.UserControlBirdSearch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSearchBird)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRefresh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBirdsGif)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,5 +232,7 @@
         private System.Windows.Forms.ComboBox cmbBirdGender;
         private System.Windows.Forms.DataGridView dataSearchBird;
         private System.Windows.Forms.PictureBox picRefresh;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.PictureBox picBirdsGif;
     }
 }

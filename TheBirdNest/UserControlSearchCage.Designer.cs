@@ -28,22 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataSearchCage = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtSN = new System.Windows.Forms.TextBox();
             this.cmbCgaeMat = new System.Windows.Forms.ComboBox();
             this.btnToSearchCage = new System.Windows.Forms.Button();
             this.lblSearchBird = new System.Windows.Forms.TextBox();
+            this.pictCage = new System.Windows.Forms.PictureBox();
+            this.picBirdsGif = new System.Windows.Forms.PictureBox();
             this.picRefresh = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataSearchCage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictCage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBirdsGif)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRefresh)).BeginInit();
             this.SuspendLayout();
             // 
             // dataSearchCage
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            this.dataSearchCage.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataSearchCage.BackgroundColor = System.Drawing.Color.AntiqueWhite;
             this.dataSearchCage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataSearchCage.GridColor = System.Drawing.Color.SaddleBrown;
+            this.dataSearchCage.GridColor = System.Drawing.Color.Black;
             this.dataSearchCage.Location = new System.Drawing.Point(0, 220);
             this.dataSearchCage.Name = "dataSearchCage";
             this.dataSearchCage.RowHeadersWidth = 51;
@@ -127,6 +134,31 @@
             this.lblSearchBird.Text = "SEARCH CAGE";
             this.lblSearchBird.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // pictCage
+            // 
+            this.pictCage.BackgroundImage = global::TheBirdNest.Properties.Resources.cageBird2_PhotoRoom_png_PhotoRoom;
+            this.pictCage.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictCage.Location = new System.Drawing.Point(473, 232);
+            this.pictCage.Margin = new System.Windows.Forms.Padding(0);
+            this.pictCage.Name = "pictCage";
+            this.pictCage.Size = new System.Drawing.Size(170, 211);
+            this.pictCage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictCage.TabIndex = 136;
+            this.pictCage.TabStop = false;
+            // 
+            // picBirdsGif
+            // 
+            this.picBirdsGif.BackColor = System.Drawing.Color.Transparent;
+            this.picBirdsGif.BackgroundImage = global::TheBirdNest.Properties.Resources.ezgif_com_resize__1_;
+            this.picBirdsGif.Cursor = System.Windows.Forms.Cursors.Default;
+            this.picBirdsGif.Location = new System.Drawing.Point(24, 319);
+            this.picBirdsGif.Margin = new System.Windows.Forms.Padding(0);
+            this.picBirdsGif.Name = "picBirdsGif";
+            this.picBirdsGif.Size = new System.Drawing.Size(429, 177);
+            this.picBirdsGif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBirdsGif.TabIndex = 135;
+            this.picBirdsGif.TabStop = false;
+            // 
             // picRefresh
             // 
             this.picRefresh.BackgroundImage = global::TheBirdNest.Properties.Resources.icons8_refresh_20;
@@ -145,6 +177,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.Controls.Add(this.pictCage);
+            this.Controls.Add(this.picBirdsGif);
             this.Controls.Add(this.picRefresh);
             this.Controls.Add(this.dataSearchCage);
             this.Controls.Add(this.panel3);
@@ -154,7 +188,10 @@
             this.Controls.Add(this.lblSearchBird);
             this.Name = "UserControlSearchCage";
             this.Size = new System.Drawing.Size(754, 515);
+            this.Load += new System.EventHandler(this.UserControlSearchCage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSearchCage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictCage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBirdsGif)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRefresh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -170,5 +207,7 @@
         private System.Windows.Forms.Button btnToSearchCage;
         private System.Windows.Forms.TextBox lblSearchBird;
         private System.Windows.Forms.PictureBox picRefresh;
+        private System.Windows.Forms.PictureBox picBirdsGif;
+        private System.Windows.Forms.PictureBox pictCage;
     }
 }

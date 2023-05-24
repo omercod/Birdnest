@@ -125,8 +125,7 @@ namespace TheBirdNest
         {
             string user = txtUserLogIn.Text;
             string pass = txtPassword.Text;
-            if (excel == null)
-                excel = new Excel(1);
+            excel = new Excel(1);
             int i = 1;
             while (excel.readCell(i, 1) != "")
             {
@@ -145,6 +144,8 @@ namespace TheBirdNest
                     {
                         MessageBox.Show("Password is not correct", "Error"
                            , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        excel.closeExecl();
+                        excel.Close();
                         return;
                     }
                 }
@@ -152,6 +153,8 @@ namespace TheBirdNest
             }
             MessageBox.Show("Username not exsist", "Error"
               , MessageBoxButtons.OK, MessageBoxIcon.Error);
+            excel.closeExecl();
+            excel.Close();
         }
 
         private void labelCreateAccount_Click(object sender, EventArgs e)
@@ -164,8 +167,6 @@ namespace TheBirdNest
         private void picExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
-            if(excel != null)
-                excel.Close();
         }
 
         private void picMinimize_Click(object sender, EventArgs e)
