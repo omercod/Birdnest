@@ -83,6 +83,16 @@ namespace TheBirdNest.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bird {
+            get {
+                object obj = ResourceManager.GetObject("bird", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bird_Cage_PNG_HD_Quality__1_ {
             get {
                 object obj = ResourceManager.GetObject("Bird-Cage-PNG-HD-Quality (1)", resourceCulture);
@@ -106,6 +116,16 @@ namespace TheBirdNest.Properties {
         internal static System.Drawing.Bitmap Bird_Nest {
             get {
                 object obj = ResourceManager.GetObject("Bird Nest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap birdCage {
+            get {
+                object obj = ResourceManager.GetObject("birdCage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +203,59 @@ namespace TheBirdNest.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cageBird2 {
+            get {
+                object obj = ResourceManager.GetObject("cageBird2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cageBird2_PhotoRoom_png_PhotoRoom {
+            get {
+                object obj = ResourceManager.GetObject("cageBird2-PhotoRoom.png-PhotoRoom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cageBird2_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("cageBird2-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap examplebird__1_ {
             get {
                 object obj = ResourceManager.GetObject("examplebird (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ezgif_com_resize {
+            get {
+                object obj = ResourceManager.GetObject("ezgif.com-resize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ezgif_com_resize__1_ {
+            get {
+                object obj = ResourceManager.GetObject("ezgif.com-resize (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

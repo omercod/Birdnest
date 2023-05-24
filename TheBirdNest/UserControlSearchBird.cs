@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing.Imaging;
+using WpfGif;
+using System.Windows.Forms.Integration;
 
 namespace TheBirdNest
 {
@@ -15,6 +14,7 @@ namespace TheBirdNest
     {
         private SqlConnection con;
         private Control parentControl;
+
 
         public Control ParentControl
         {
@@ -41,8 +41,18 @@ namespace TheBirdNest
 
         private void UserControlBirdSearch_Load(object sender, EventArgs e)
         {
+            // Set the path to your GIF file
+            string gifPath = @"C:\Users\omcl9\source\repos\TheBirdNest\TheBirdNest\Resources\ezgif.com-resize.gif";
+            // Clear the BackgroundImage property of the PictureBox
+            picBirdsGif.BackgroundImage = null;
 
+            // Create a new instance of the Bitmap class with the path to the GIF file
+            var gifImage = new System.Drawing.Bitmap(gifPath);
+
+            // Set the Image property of the PictureBox to the GIF image
+            picBirdsGif.Image = gifImage;
         }
+
 
         private void txtSN_Enter(object sender, EventArgs e)
         {
@@ -70,6 +80,7 @@ namespace TheBirdNest
         private void btnToSearchBird_Click(object sender, EventArgs e)
         {
             dataSearch();
+            picBirdsGif.Visible = false;
         }
 
         public void dataSearch()
@@ -108,6 +119,7 @@ namespace TheBirdNest
         public void PopulateDataGridView()
         {
             // Clear existing data in the DataGridView
+            picBirdsGif.Visible = false;
             dataSearchBird.DataSource = null;
             dataSearchBird.Rows.Clear();
             dataSearchBird.Columns.Clear();
@@ -182,8 +194,7 @@ namespace TheBirdNest
                             row["Gender"] = reader.GetString(4);
                             row["Cage Number"] = reader.GetString(5);
                             dataTable.Rows.Add(row);
-
-                        }
+                    }
                }
             }
             con.Close();

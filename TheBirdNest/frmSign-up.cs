@@ -148,26 +148,31 @@ namespace TheBirdNest
             int passLetters = pass.Count(c => Char.IsLetter(c));
 
             //Excel
-            if (excel == null)
-                excel = new Excel(1);
+            excel = new Excel(1);
 
             //userName Error
             if (userName.Length < 6 || userName.Length > 8)
             {
                 MessageBox.Show(userName+" is not vaild."+"\nUsername must include 6-8 characters.","Error Username"
                     ,MessageBoxButtons.OK,MessageBoxIcon.Error);
+                excel.closeExecl();
+                excel.Close();
                 return;
             }
             if (userNameDigits > 2)
             {
                 MessageBox.Show(userName + " is not vaild." + "\nUsername can include up to 2 digits.", "Error Username"
                     , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                excel.closeExecl();
+                excel.Close();
                 return;
             }
             if (userNameDigits + userNameLetters != userName.Length)
             {
                 MessageBox.Show(userName + " is not vaild." + "\nUsername contains only digits and letters.", "Error Username"
                     , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                excel.closeExecl();
+                excel.Close();
                 return;
             }
             int i = 1;
@@ -177,6 +182,8 @@ namespace TheBirdNest
                 {
                     MessageBox.Show("User: " + txtUserLogIn.Text + " is allready exist", "Error Username"
                                       , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    excel.closeExecl();
+                    excel.Close();
                     return;
                 }
                 i++;
@@ -187,12 +194,16 @@ namespace TheBirdNest
             {
                 MessageBox.Show(pass + " is not vaild." + "\nPassword must include 8-10 characters.", "Error Password"
                     , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                excel.closeExecl();
+                excel.Close();
                 return;
             }
             if (passDigits < 1 || passLetters < 1 || pass.Length == passDigits + passLetters)
             {
                 MessageBox.Show(pass + " is not vaild." + "\nPassword must contains at least one digit, letter and" +
                     " speacial character.", "Error Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                excel.closeExecl();
+                excel.Close();
                 return;
             }
 
@@ -201,6 +212,8 @@ namespace TheBirdNest
             {
                 MessageBox.Show("Please enter a 9 digits ID.", "Error ID"
                     , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                excel.closeExecl();
+                excel.Close();
                 return;
             }
             i = 1;
@@ -210,6 +223,8 @@ namespace TheBirdNest
                 {
                     MessageBox.Show("ID: "+ txtID.Text + " is allready exist", "Error ID"
                                       , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    excel.closeExecl();
+                    excel.Close();
                     return;
                 }
                 i++;

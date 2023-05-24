@@ -51,6 +51,8 @@ namespace TheBirdNest
         private void btnToSearchCage_Click(object sender, EventArgs e)
         {
             dataSearch();
+            picBirdsGif.Visible = false;
+            pictCage.Visible = false;
         }
 
         public void dataSearch()
@@ -192,6 +194,8 @@ namespace TheBirdNest
         // refresh the data table
         public void PopulateDataGridView()
         {
+            picBirdsGif.Visible = false;
+            pictCage.Visible = false;
             // Clear existing data in the DataGridView
             dataSearchCage.DataSource = null;
             dataSearchCage.Rows.Clear();
@@ -211,6 +215,20 @@ namespace TheBirdNest
             txtSN.Text = "Cage Number";
             txtSN.ForeColor = Color.Gray;
             cmbCgaeMat.SelectedIndex = 0;
+        }
+
+        private void UserControlSearchCage_Load(object sender, EventArgs e)
+        {
+            // Set the path to your GIF file
+            string gifPath = @"C:\Users\omcl9\source\repos\TheBirdNest\TheBirdNest\Resources\ezgif.com-resize (1).gif";
+            // Clear the BackgroundImage property of the PictureBox
+            picBirdsGif.BackgroundImage = null;
+
+            // Create a new instance of the Bitmap class with the path to the GIF file
+            var gifImage = new System.Drawing.Bitmap(gifPath);
+
+            // Set the Image property of the PictureBox to the GIF image
+            picBirdsGif.Image = gifImage;
         }
     }
 }
