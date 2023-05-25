@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,15 +20,32 @@ namespace TheBirdNest
         string[] arrAustralia = {"Central Australia", "Coastal Cities"};
         public string userID { get; set; }
         public string[] cageNumbers;
-        SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;
-            AttachDbFilename=C:\Users\OMCL9\Source\Repos\TheBirdNest\TheBirdNest\BirdNestDB.mdf;
-            Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;
-            ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        private SqlConnection con;
         public userControlAddBird()
         {
             InitializeComponent();
             dateBirdHatchingDate.MaxDate = DateTime.Now;
             dateBirdHatchingDate.Value = DateTime.Now;
+            con = new SqlConnection(findCon());
+        }
+
+        public string findCon()
+        {
+            string databaseFileName = "BirdNestDB.mdf";
+
+            // Get the directory path of the executable file
+            string directoryPath = AppDomain.CurrentDomain.BaseDirectory;
+
+            // Combine the directory path with the database file name
+            string databaseFilePath = Path.Combine(directoryPath, databaseFileName);
+
+            // Update the connection string to use the dynamic file path and database name
+            string connectionString = $@"Data Source=(LocalDb)\MSSQLLocalDB;
+             AttachDbFilename='{databaseFilePath}';Integrated Security=True;Connect Timeout=30;
+            Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;
+             MultiSubnetFailover=False";
+
+            return connectionString;
         }
 
         private void userControlAddBird_Load(object sender, EventArgs e)
