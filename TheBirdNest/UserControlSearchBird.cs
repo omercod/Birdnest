@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing.Imaging;
 using WpfGif;
 using System.Windows.Forms.Integration;
+using System.IO;
 
 namespace TheBirdNest
 {
@@ -25,10 +26,7 @@ namespace TheBirdNest
         public UserControlBirdSearch()
         {
             InitializeComponent();
-            con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;
-            AttachDbFilename=C:\Users\OMCL9\Source\Repos\TheBirdNest\TheBirdNest\BirdNestDB.mdf;
-            Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;
-            ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            con = new SqlConnection(findCon());
             // Set the default text for the DateTimePicker control
             dateHatching.CustomFormat = "'Select Date'";
             dateHatching.Format = DateTimePickerFormat.Custom;
@@ -37,6 +35,25 @@ namespace TheBirdNest
             dataSearchBird.Visible = false;
             dateHatching.MaxDate = DateTime.Now;
             dateHatching.CalendarMonthBackground = Color.AntiqueWhite;
+        }
+
+        public string findCon()
+        {
+            string databaseFileName = "BirdNestDB.mdf";
+
+            // Get the directory path of the executable file
+            string directoryPath = AppDomain.CurrentDomain.BaseDirectory;
+
+            // Combine the directory path with the database file name
+            string databaseFilePath = Path.Combine(directoryPath, databaseFileName);
+
+            // Update the connection string to use the dynamic file path and database name
+            string connectionString = $@"Data Source=(LocalDb)\MSSQLLocalDB;
+             AttachDbFilename='{databaseFilePath}';Integrated Security=True;Connect Timeout=30;
+            Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;
+             MultiSubnetFailover=False";
+
+            return connectionString;
         }
 
         private void UserControlBirdSearch_Load(object sender, EventArgs e)
