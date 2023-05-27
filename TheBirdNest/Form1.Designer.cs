@@ -47,7 +47,6 @@ namespace TheBirdNest
             this.panelControl = new System.Windows.Forms.Panel();
             this.pictMinimize = new System.Windows.Forms.PictureBox();
             this.picExit = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -90,7 +89,6 @@ namespace TheBirdNest
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.txtUserLogIn);
             this.panel2.Controls.Add(this.labelCreateAccount);
             this.panel2.Controls.Add(this.label1);
@@ -279,18 +277,6 @@ namespace TheBirdNest
             this.picExit.TabStop = false;
             this.picExit.Click += new System.EventHandler(this.picExit_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.ForeColor = System.Drawing.Color.DimGray;
-            this.button1.Location = new System.Drawing.Point(568, 63);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 31);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -338,7 +324,6 @@ namespace TheBirdNest
         private System.Windows.Forms.PictureBox picExit;
         private System.Windows.Forms.Panel panelControl;
         private System.Windows.Forms.PictureBox pictMinimize;
-        private System.Windows.Forms.Button button1;
     }
 }
 
