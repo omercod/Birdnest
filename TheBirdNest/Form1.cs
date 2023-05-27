@@ -174,12 +174,5 @@ namespace TheBirdNest
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Home HomeMenu = new Home("talco12");
-            HomeMenu.Show();
-            this.Hide();
-            return;
-        }
     }
 }

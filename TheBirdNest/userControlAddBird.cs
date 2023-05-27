@@ -102,10 +102,6 @@ namespace TheBirdNest
                 txtBirdFatherSerialNumber.Text = "";
             }
 
-            con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;
-            AttachDbFilename=C:\Users\OMCL9\Source\Repos\TheBirdNest\TheBirdNest\BirdNestDB.mdf;
-            Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;
-            ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             string addtotable = $"insert into BirdsTable values('{txtSerialNumberBird.Text}','" +
                 $"{comboBoxBirdSpe.Text}','" +
                 $"{comboBoxBirdSubSpe.Text}','{dateBirdHatchingDate.Value.ToString("yyyy-MM-dd")}" +
