@@ -35,6 +35,7 @@ namespace TheBirdNest
             userControlAddBird1.Show();
             userControlAddCage1.Hide();
             userControlBirdSearch1.Hide();
+            userControlSearchCage1.Hide();
             bttnAddBird.ForeColor = Color.Black;
             btnAddCage.ForeColor = Color.White;
             btnSearchBird.ForeColor = Color.White;
@@ -52,6 +53,7 @@ namespace TheBirdNest
             userControlAddCage1.Show();
             userControlAddBird1.Hide();
             userControlBirdSearch1.Hide();
+            userControlSearchCage1.Hide();
             btnAddCage.ForeColor = Color.Black;
             bttnAddBird.ForeColor = Color.White;
             btnSearchBird.ForeColor = Color.White;
@@ -68,10 +70,30 @@ namespace TheBirdNest
             userControlBirdSearch1.Show();
             userControlAddCage1.Hide();
             userControlAddBird1.Hide();
+            userControlSearchCage1.Hide();
             bttnAddBird.ForeColor = Color.White;
             btnAddCage.ForeColor = Color.White;
             btnSearchBird.ForeColor = Color.Black;
             btnSearchCage.ForeColor = Color.White;
+
+        }
+
+        private void btnSearchCage_Click(object sender, EventArgs e)
+        {
+            userControlSearchCage1.Show();
+            userControlBirdSearch1.Hide();
+            userControlAddCage1.Hide();
+            userControlAddBird1.Hide();
+            bttnAddBird.ForeColor = Color.White;
+            btnAddCage.ForeColor = Color.White;
+            btnSearchBird.ForeColor = Color.White;
+            btnSearchCage.ForeColor = Color.Black;
+
+        }
+
+        private void userControlSearchCage1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -304,6 +304,7 @@ namespace TheBirdNest
             this.userControlSearchCage1.Name = "userControlSearchCage1";
             this.userControlSearchCage1.Size = new System.Drawing.Size(754, 515);
             this.userControlSearchCage1.TabIndex = 26;
+            this.userControlSearchCage1.Load += new System.EventHandler(this.userControlSearchCage1_Load);
             // 
             // Home
             // 
