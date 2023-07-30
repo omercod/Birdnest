@@ -15,6 +15,7 @@ namespace TheBirdNest
     public partial class UserControlSearchCage : UserControl
     {
         private SqlConnection con;
+        private string gifFileName = "ezgif.com-resize (1).gif";
         public UserControlSearchCage()
         {
             InitializeComponent();
@@ -240,8 +241,12 @@ namespace TheBirdNest
 
         private void UserControlSearchCage_Load(object sender, EventArgs e)
         {
-            // Set the path to your GIF file
-            string gifPath = @"C:\Users\omcl9\source\repos\TheBirdNest\TheBirdNest\Resources\ezgif.com-resize (1).gif";
+            // Get the base directory of the application
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+            // Combine the base directory with the GIF file name
+            string gifPath = Path.Combine(baseDirectory, gifFileName);
+
             // Clear the BackgroundImage property of the PictureBox
             picBirdsGif.BackgroundImage = null;
 
