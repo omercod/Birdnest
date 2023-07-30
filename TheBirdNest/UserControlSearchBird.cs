@@ -15,7 +15,7 @@ namespace TheBirdNest
     {
         private SqlConnection con;
         private Control parentControl;
-
+        private string gifFileName = "ezgif.com-resize.gif";
 
         public Control ParentControl
         {
@@ -58,8 +58,12 @@ namespace TheBirdNest
 
         private void UserControlBirdSearch_Load(object sender, EventArgs e)
         {
-            // Set the path to your GIF file
-            string gifPath = @"C:\Users\omcl9\source\repos\TheBirdNest\TheBirdNest\Resources\ezgif.com-resize.gif";
+            // Get the base directory of the application
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+            // Combine the base directory with the GIF file name
+            string gifPath = Path.Combine(baseDirectory, gifFileName);
+
             // Clear the BackgroundImage property of the PictureBox
             picBirdsGif.BackgroundImage = null;
 
@@ -162,8 +166,17 @@ namespace TheBirdNest
             // Add search conditions dynamically
             if (txtSN.Text != "" && txtSN.Text != "Serial Number")
             {
-                query += $" AND Serial_Number = '{txtSN.Text}'";
-                parameters.Add(new SqlParameter("@SerialNumber", int.Parse(txtSN.Text)));
+                try
+                {
+                    parameters.Add(new SqlParameter("@SerialNumber", int.Parse(txtSN.Text)));
+                    query += $" AND Serial_Number = '{txtSN.Text}'"; 
+                }
+                catch
+                {
+                    query += $" AND Serial_Number = '12314'";
+                }
+             
+                    
             }
 
             if (dateHatching.CustomFormat != "'Select Date'")
